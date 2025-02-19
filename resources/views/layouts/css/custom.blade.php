@@ -14,7 +14,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-image: url('{{ asset('assets/custom/homepage/layer_1.WebP') }}');
     background-size: cover;
     background-position: center;
@@ -55,7 +55,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3));
     z-index: 15;
 }
