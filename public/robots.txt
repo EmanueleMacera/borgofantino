@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /login/
+Sitemap: https://borgofantino.it/sitemap.xml
