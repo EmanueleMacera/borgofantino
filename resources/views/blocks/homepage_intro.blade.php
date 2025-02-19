@@ -1,22 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="parallax-container">
-    <div class="parallax-background">
-        <img src="{{ asset('assets/custom/homepage/layer_1.WebP') }}" alt="Room" class="background-image">
+    <div class="parallax-container">
+        <div class="parallax-background"></div>
+        
+        <div class="parallax-title">
+            <h1>Borgo Fantino</h1>
+        </div>
+        
+        <div class="parallax-table"></div>
+        
+        <div class="parallax-overlay"></div>
+        
     </div>
-    
-    <div class="parallax-title">
-        <h1>Borgo Fantino</h1>
-    </div>
-    
-    <div class="parallax-table">
-        <img src="{{ asset('assets/custom/homepage/layer_2.WebP') }}" alt="Table setting" class="table-image">
-    </div>
-    
-    <div class="parallax-overlay"></div>
-    
-</div>
 
 {{-- Contenuto resto della pagina --}}
 <div class="content">

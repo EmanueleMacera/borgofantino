@@ -3,15 +3,10 @@
 {{-- =========================== --}}
 
 {{-- Intro --}}
-.parallax-wrapper {
-    width: 100%;
-    overflow: hidden;
-}
-
 .parallax-container {
     position: relative;
-    width: 100%;
-    aspect-ratio: 1920/1080;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .parallax-background {
@@ -20,13 +15,11 @@
     left: 0;
     width: 100%;
     height: 100%;
+    background-image: url('{{ asset('assets/custom/homepage/layer_1.WebP') }}');
+    background-size: cover;
+    background-position: center;
+    will-change: transform;
     z-index: 10;
-}
-
-.background-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
 }
 
 .parallax-title {
@@ -38,11 +31,10 @@
 }
 
 .parallax-title h1 {
-    font-size: clamp(2rem, 8vw, 4rem);
+    font-size: 4rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
-    white-space: nowrap;
 }
 
 .parallax-table {
@@ -50,13 +42,12 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    height: 40vh;
+    background-image: url('{{ asset('assets/custom/homepage/layer_2.WebP') }}');
+    background-size: cover;
+    background-position: center top;
+    will-change: transform;
     z-index: 30;
-}
-
-.table-image {
-    width: 100%;
-    height: auto;
-    display: block;
 }
 
 .parallax-overlay {
