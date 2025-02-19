@@ -32,11 +32,6 @@
     z-index: -2;
 }
 
-#layer3 {
-    background-image: url("{{ asset('assets/custom/homepage/layer_3.WebP') }}");
-    z-index: -1;
-}
-
 .parallax-text {
     position: absolute;
     bottom: 20%;
