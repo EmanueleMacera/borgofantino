@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="parallax-container">
-    <div class="parallax-background"></div>
+    <div class="parallax-background">
+        <img src="{{ asset('assets/custom/homepage/layer_1.WebP') }}" alt="Room" class="background-image">
+    </div>
     
     <div class="parallax-title">
         <h1>Borgo Fantino</h1>
@@ -18,7 +20,7 @@
 
 {{-- Contenuto resto della pagina --}}
 <div class="content">
-    <div class="test"></div>
+    <div style="height:100vh"></div>
 </div>
 @endsection
 
@@ -31,11 +33,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
+        const windowHeight = window.innerHeight;
         
-        // Effetto parallax per ogni elemento
-        background.style.transform = `translateY(${scrolled * 0.5}px)`;
-        title.style.transform = `translate(-50%, -50%) translateY(${scrolled * 0.3}px)`;
-        table.style.transform = `translateY(${scrolled * 0.1}px)`;
+        // Calcola il rapporto di scroll rispetto all'altezza della viewport
+        const scrollRatio = scrolled / windowHeight;
+        
+        // Applica le trasformazioni mantenendo le proporzioni
+        background.style.transform = `translateY(${scrollRatio * 50}px)`;
+        title.style.transform = `translate(-50%, -50%) translateY(${scrollRatio * 30}px)`;
+        table.style.transform = `translateY(${scrollRatio * 10}px)`;
     });
 });
 </script>
