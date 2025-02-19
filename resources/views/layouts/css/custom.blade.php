@@ -59,3 +59,14 @@
     background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3));
     z-index: 15;
 }
+
+.test {
+    height: 100vh;
+    background: #f1f1f1;
+}
+
+{{-- =========================== --}}
+{{-- 2. About us                 --}}
+{{-- =========================== --}}
+
+{{-- Intro --}}

@@ -16,7 +16,7 @@
 
 {{-- Contenuto resto della pagina --}}
 <div class="content">
-    {{-- Altre sezioni del tuo sito --}}
+    <div class="test"></div>
 </div>
 @endsection
 
