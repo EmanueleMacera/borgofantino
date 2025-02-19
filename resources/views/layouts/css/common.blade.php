@@ -337,7 +337,7 @@ i {
 
 {{-- Navbar brand image --}}
 .navbar-brand img {
-    height: 40px;
+    height: 50px;
     width: auto;
 }
 
