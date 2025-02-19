@@ -1,22 +1,40 @@
-<div class="parallax">
-    <div class="layer" id="layer2"></div>
-    <div class="layer" id="layer1"></div>
-    <div class="parallax-text">
+@extends('layouts.app')
+
+@section('content')
+<div class="parallax-container">
+    <div class="parallax-background"></div>
+    
+    <div class="parallax-title">
         <h1>Borgo Fantino</h1>
     </div>
+    
+    <div class="parallax-table"></div>
+    
+    <div class="parallax-overlay"></div>
+    
 </div>
+
+{{-- Contenuto resto della pagina --}}
+<div class="content">
+    {{-- Altre sezioni del tuo sito --}}
+</div>
+@endsection
 
 @push('scripts')
 <script>
-    const layers = document.querySelectorAll('.layer');
+document.addEventListener('DOMContentLoaded', function() {
+    const background = document.querySelector('.parallax-background');
+    const title = document.querySelector('.parallax-title');
+    const table = document.querySelector('.parallax-table');
 
-        window.addEventListener('scroll', () => {
-        let scroll = window.pageYOffset;
-
-        layers.forEach(layer => {
-            let speed = layer.getAttribute('data-speed');
-            layer.style.transform = `translateY(${scroll * speed}px)`;
-        });
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        
+        // Effetto parallax per ogni elemento
+        background.style.transform = `translateY(${scrolled * 0.5}px)`;
+        title.style.transform = `translate(-50%, -50%) translateY(${scrolled * 0.3}px)`;
+        table.style.transform = `translateY(${scrolled * 0.1}px)`;
     });
+});
 </script>
 @endpush

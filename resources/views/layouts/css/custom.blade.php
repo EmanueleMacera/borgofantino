@@ -3,46 +3,59 @@
 {{-- =========================== --}}
 
 {{-- Intro --}}
-.parallax {
-    perspective: 1px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+.parallax-container {
     position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.layer {
+.parallax-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background-image:url("{{ asset('assets/custom/homepage/layer_1.WebP') }}");
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     will-change: transform;
+    z-index: 10;
 }
 
-#layer1 {
-    background-image: url("{{ asset('assets/custom/homepage/layer_1.WebP') }}");
-    z-index: -3;
-}
-
-#layer2 {
-    background-image: url("{{ asset('assets/custom/homepage/layer_2.WebP') }}");
-    z-index: -2;
-}
-
-.parallax-text {
+.parallax-title {
     position: absolute;
-    bottom: 20%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    width: 100%;
-    z-index: 0;
+    transform: translate(-50%, -50%);
+    z-index: 20;
 }
 
-.parallax-text h1 {
-    font-size: 3rem;
-    color: #fff;
+.parallax-title h1 {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.parallax-table {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    background-image:url("{{ asset('assets/custom/homepage/layer_2.WebP') }}");
+    background-size: cover;
+    background-position: center top;
+    will-change: transform;
+    z-index: 30;
+}
+
+.parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3));
+    z-index: 15;
 }
