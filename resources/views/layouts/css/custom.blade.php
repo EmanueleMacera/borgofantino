@@ -42,12 +42,13 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 40vh;
-    background-image:url("{{ asset('assets/custom/homepage/layer_2.WebP') }}");
-    background-size: cover;
-    background-position: center top;
-    will-change: transform;
     z-index: 30;
+}
+
+.table-image {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .parallax-overlay {

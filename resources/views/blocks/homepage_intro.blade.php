@@ -8,7 +8,9 @@
         <h1>Borgo Fantino</h1>
     </div>
     
-    <div class="parallax-table"></div>
+    <div class="parallax-table">
+        <img src="{{ asset('assets/custom/homepage/layer_2.WebP') }}" alt="Table setting" class="table-image">
+    </div>
     
     <div class="parallax-overlay"></div>
     
