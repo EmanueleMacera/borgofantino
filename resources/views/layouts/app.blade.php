@@ -6,15 +6,15 @@
     
     <!-- SEO Meta Tags -->
     <title>@yield('title') - {{ config('app.name') }}</title>
-    <meta name="description" content="TreehouseItalia è specializzata nella gestione immobiliare, offrendo soluzioni innovative per proprietari e affittuari.">
-    <meta name="keywords" content="gestione immobiliare, case in affitto, affitti brevi, Treehouse Italia">
-    <meta name="author" content="TreehouseItalia">
+    <meta name="description" content="Borgo Fantino affitta residenze e alloggi in montagna.">
+    <meta name="keywords" content="case in affitto, affitti brevi, montagna, Borgo Fanitno">
+    <meta name="author" content="Emanuele Macera">
     <meta name="robots" content="index, follow">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Open Graph (Facebook & LinkedIn) -->
     <meta property="og:title" content="@yield('title') - {{ config('app.name') }}">
-    <meta property="og:description" content="TreehouseItalia è specializzata nella gestione immobiliare, offrendo soluzioni innovative per proprietari e affittuari.">
+    <meta property="og:description" content="Borgo Fantino affitta residenze e alloggi in montagna.">
     <meta property="og:image" content="{{ asset('assets/logo/logo.WebP') }}">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:type" content="website">
@@ -22,7 +22,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="@yield('title') - {{ config('app.name') }}">
-    <meta name="twitter:description" content="TreehouseItalia è specializzata nella gestione immobiliare, offrendo soluzioni innovative per proprietari e affittuari.">
+    <meta name="twitter:description" content="Borgo Fantino affitta residenze e alloggi in montagna.">
     <meta name="twitter:image" content="{{ asset('assets/logo/logo.WebP') }}">
 
     <!-- Favicon -->
@@ -46,19 +46,10 @@
     <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WBJF4ZJPCC"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-WBJF4ZJPCC');
-    </script>
 
     <!-- ShinyStat (Asincrono per evitare rallentamenti) -->
-    <script async src="//codiceisp.shinystat.com/cgi-bin/getcod.cgi?NODW=yes&USER=SS-52336903-fb228"></script>
 
     <!-- CookieYes Banner -->
-    <script id="cookieyes" async src="https://cdn-cookieyes.com/client_data/433348fb50a2e54e5617d477/script.js"></script>
 
 </head>
 <body>

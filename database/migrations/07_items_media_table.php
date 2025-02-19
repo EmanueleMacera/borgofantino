@@ -18,9 +18,15 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug')->nullable();
+            $table->text('adress')->nullable();
+            $table->decimal('latitude')->nullable();
+            $table->decimal('longitude')->nullable();
             $table->text('description')->nullable();
-            $table->float('characteristic_one')->nullable();
-            $table->float('characteristic_two')->nullable();
+            $table->integer('bagni')->nullable();
+            $table->integer('camere')->nullable();
+            $table->integer('posti_letto')->nullable();
+            $table->text('nei_dintorni')->nullable();
+            $table->string('link')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->enum('status', ['draft', 'publish'])->default('draft');
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');

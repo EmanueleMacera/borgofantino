@@ -4,7 +4,7 @@
 
             <!-- About Section -->
             <div class="col-12 col-md-4 mb-4 mb-md-0">
-                <img class="custom-logo-footer" src="{{ asset('assets/logo/logo.WebP') }}" alt="TreeHouse Italia" loading="lazy">
+                <img class="custom-logo-footer" src="{{ asset('assets/logo/logo.WebP') }}" alt="Borgo Fantino" loading="lazy">
                 <p class="small">{{ $style->about ?? ''}}</p>
             </div>
 

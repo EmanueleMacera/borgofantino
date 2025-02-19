@@ -3,7 +3,7 @@
     <div class="block-parallax-home"></div>
     <div class="homepage-wrapper">
         <div class="homepage-content">
-            <img class="custom-logo" src="{{ asset('assets/logo/logo.WebP') }}" alt="TreeHouse Italia" loading="lazy">
+            <img class="custom-logo" src="{{ asset('assets/logo/logo.WebP') }}" alt="Borgo Fantino" loading="lazy">
             <div class="logo-container">
                 <h1 id="page-logo">{{ __('custom.intro') }}</h1>
             </div>
