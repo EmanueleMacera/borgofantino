@@ -3,11 +3,15 @@
 {{-- =========================== --}}
 
 {{-- Intro --}}
+.parallax-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
 .parallax-container {
     position: relative;
     width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    aspect-ratio: 1920/1080;
 }
 
 .parallax-background {
@@ -22,8 +26,7 @@
 .background-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center;
+    object-fit: contain;
 }
 
 .parallax-title {
@@ -64,34 +67,4 @@
     height: 100%;
     background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3));
     z-index: 15;
-}
-
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 0.875rem;
-    z-index: 40;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateX(-50%) translateY(0);
-    }
-    40% {
-        transform: translateX(-50%) translateY(-30px);
-    }
-    60% {
-        transform: translateX(-50%) translateY(-15px);
-    }
-}
-
-@media screen and (max-aspect-ratio: 16/9) {
-    .parallax-container {
-        height: auto;
-        aspect-ratio: 16/9;
-    }
 }

@@ -30,15 +30,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const background = document.querySelector('.parallax-background');
     const title = document.querySelector('.parallax-title');
     const table = document.querySelector('.parallax-table');
+    const container = document.querySelector('.parallax-container');
 
     window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const windowHeight = window.innerHeight;
+        const rect = container.getBoundingClientRect();
+        const containerHeight = rect.height;
+        const scrollPosition = -rect.top;
         
-        // Calcola il rapporto di scroll rispetto all'altezza della viewport
-        const scrollRatio = scrolled / windowHeight;
+        // Calcola il rapporto di scroll rispetto all'altezza del container
+        const scrollRatio = scrollPosition / containerHeight;
         
-        // Applica le trasformazioni mantenendo le proporzioni
+        // Applica le trasformazioni proporzionalmente
         background.style.transform = `translateY(${scrollRatio * 50}px)`;
         title.style.transform = `translate(-50%, -50%) translateY(${scrollRatio * 30}px)`;
         table.style.transform = `translateY(${scrollRatio * 10}px)`;
