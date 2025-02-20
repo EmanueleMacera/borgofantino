@@ -4,12 +4,10 @@
 
 @section('content')
     <main class="flex-grow-1">
-        <div>
             @if (!Request::is('/'))
                 @include('layouts.partials.breadcrumb')
             @endif
             @yield('public-content')
-        </div>
     </main>
     <div id="scroll-indicator" class="scroll-indicator">
         <i class="fa-solid fa-angles-down"></i>

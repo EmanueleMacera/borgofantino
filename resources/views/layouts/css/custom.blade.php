@@ -2,6 +2,14 @@
 {{-- 1. Homepage                 --}}
 {{-- =========================== --}}
 
+p {
+    font-size: 2rem !important;
+}
+
+h1 {
+    font-size: 4.1rem !important;
+}
+
 {{-- Intro --}}
 .parallax-container {
     position: relative;
@@ -29,21 +37,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 20;
+    text-align: center;
 }
 
 .parallax-title h1 {
-    font-size: 4.1rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-align: center;
     font-weight: bolder;
 }
 
 .parallax-title p {
-    font-size: 2rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    text-align: center;
     font-weight: bolder;
 }
 
@@ -77,6 +82,31 @@
     -webkit-backdrop-filter: blur(1.5px);
 }
 
+.alloggi-container {
+    min-height: 100vh;
+    will-change: transform;
+    translate: 0 -10px;
+}
+
+.alloggi-container h1 {
+    font-weight: bolder;
+}
+
+.alloggi-container a {
+    border-radius: 25px;
+    max-width: 150px !important;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    letter-spacing: 0.5px;
+}
+
+.custom-logo-footer {
+    width: 100%;
+    max-width: 150px;
+}
+
+
 {{-- ========================= --}}
 {{-- 20. Media Queries         --}}
 {{-- ========================= --}}
@@ -86,8 +116,20 @@
         translate: 0 -80px;
     }
 
-    .parallax-title p {
-        font-size: 1rem;
+    .alloggi-container {
+        translate: 0 -50px;
+    }
+
+    h1 {
+        font-size: 2.5rem !important;
+    }
+
+    p {
+        font-size: 1.5rem !important;
+    }
+
+    a {
+        font-size: 1rem !important;
     }
 
 }

@@ -28,6 +28,10 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+html {
+    font-size: clamp(0.8rem, 1vw, 2rem);
+}
+
 {{-- Basic page setup --}}
 body {
     font-family: var(--site-font)!important;

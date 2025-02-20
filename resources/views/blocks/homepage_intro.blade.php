@@ -1,22 +1,16 @@
-@extends('layouts.app')
 
-@section('content')
-    <div class="parallax-container">
-        <div class="parallax-background"></div>
-        
-        <div class="parallax-title">
-            <h1>{{ __('custom.title') }}</h1>
-            <p>{{ __('custom.subtitle') }}</p>
-        </div>
-        
-        <div class="parallax-table"></div>
-        
-        <div class="parallax-overlay"></div>
-
-        <button class="btn btn-primary">{{ __('custom.see') }}</button>
-        
+<div class="parallax-container">
+    <div class="parallax-background"></div>
+    
+    <div class="parallax-title">
+        <h1>{{ __('custom.title') }}</h1>
+        <p>{{ __('custom.subtitle') }}</p>
     </div>
-@endsection
+    
+    <div class="parallax-table"></div>
+    
+    <div class="parallax-overlay"></div>
+</div>
 
 @push('scripts')
 <script>

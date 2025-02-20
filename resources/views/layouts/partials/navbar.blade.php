@@ -1,5 +1,5 @@
 <!-- Navbar Blade Template -->
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-md">
     <div class="container-fluid">
 
         <div class="d-flex flex-nowrap align-items-center">
