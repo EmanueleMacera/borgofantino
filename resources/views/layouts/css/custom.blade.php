@@ -13,6 +13,17 @@ h1 {
     font-size: 4.1rem !important;
 }
 
+a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+
+.btn-primary {
+    border-radius: 25px!important;
+}
+
+
 {{-- Intro --}}
 .parallax-container {
     position: relative;
@@ -98,8 +109,6 @@ h1 {
 .alloggi-container a {
     border-radius: 25px;
     max-width: 150px !important;
-    color: white;
-    text-decoration: none;
     font-weight: bolder;
     letter-spacing: 0.5px;
 }
@@ -175,14 +184,10 @@ font-size:1.2rem!important;
 }
 
 .contact-card {
-    background: #fff;
+    background: rgb(255, 255, 255, 0.4);
     padding: 12px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-}
-
-.contact-card a{
-    color: white;
 }
 
 .contact-links {
@@ -191,23 +196,21 @@ font-size:1.2rem!important;
     gap: 10px;
 }
 
-.activities-container {
-    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
-}
-
 .activities-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     margin-top: 40px;
 }
 
 .activity-card {
-    background: white;
+    background: rgb(255, 255, 255, 0.4);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
+    max-width: 350px;
+    max-height: 450px;
 }
 
 .activity-card:hover {
@@ -240,8 +243,8 @@ font-size:1.2rem!important;
 }
 
 .activity-badge i {
-    font-size: 24px;
-    color: #0056b3;
+    font-size: 20px;
+    margin:0;
 }
 
 .activity-content {
@@ -264,7 +267,7 @@ font-size:1.2rem!important;
     background: #f8f9fa;
     padding: 5px 10px;
     border-radius: 20px;
-    font-size: 0.9em;
+    font-size: 0.75em;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -274,17 +277,105 @@ font-size:1.2rem!important;
     color: #0056b3;
 }
 
-.btn-outline-primary {
-    width: 100%;
-    border-radius: 25px;
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+.activities-container p {
+    font-size: 0.9rem !important;
 }
 
+.activities-container {
+    padding: 50px 0;
+}
 
+.season-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.season-tab {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    background: #f8f9fa;
+    color: #666;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.season-tab i {
+    font-size: 1.2rem;
+}
+
+.season-tab.active {
+    background: #0056b3;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,86,179,0.2);
+}
+
+.season-tab[data-season="summer"].active {
+    background: #ff6b6b;
+}
+
+.season-tab[data-season="winter"].active {
+    background: #4dabf7;
+}
+
+.season-pane {
+    position: absolute;
+    width: 100%;
+    visibility: visible;
+    opacity: 0;
+    justify-items: center;
+    transform: translateY(0px);
+    transition: all 0.5s ease;
+    pointer-events: none;
+}
+
+.season-pane.active {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    justify-items: center;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.season-content {
+    position: relative;
+    overflow: hidden;
+}
+
+#summer .activity-badge i {
+    color: #ff6b6b;
+}
+
+#winter .activity-badge i {
+    color: #4dabf7;
+}
+
+#summer .btn-primary {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+#summer .btn-primary:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+#winter .btn-primary {
+    color: #4dabf7;
+    border-color: #4dabf7;
+}
+
+#winter .btn-primary:hover {
+    background: #4dabf7;
+    color: white;
+}
 
 
 {{-- ========================= --}}
@@ -331,6 +422,17 @@ font-size:1.2rem!important;
 
     .activities-grid {
         grid-template-columns: 1fr;
+    }
+
+    .season-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .season-tab {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
     }
     
 
