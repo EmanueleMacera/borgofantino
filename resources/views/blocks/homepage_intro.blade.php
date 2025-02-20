@@ -5,12 +5,15 @@
         <div class="parallax-background"></div>
         
         <div class="parallax-title">
-            <h1>Borgo Fantino</h1>
+            <h1>{{ __('custom.title') }}</h1>
+            <p>{{ __('custom.subtitle') }}</p>
         </div>
         
         <div class="parallax-table"></div>
         
         <div class="parallax-overlay"></div>
+
+        <button class="btn btn-primary">{{ __('custom.see') }}</button>
         
     </div>
 
@@ -33,12 +36,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const containerHeight = rect.height;
         const scrollPosition = -rect.top;
         
-        // Calcola il rapporto di scroll rispetto all'altezza del container
         const scrollRatio = scrollPosition / containerHeight;
         
-        // Applica le trasformazioni proporzionalmente
         background.style.transform = `translateY(${scrollRatio * 50}px)`;
-        title.style.transform = `translate(-50%, -50%) translateY(${scrollRatio * 30}px)`;
+        title.style.transform = `translate(-50%, -50%) translateY(${scrollRatio * 150}px)`;
         table.style.transform = `translateY(${scrollRatio * 10}px)`;
     });
 });

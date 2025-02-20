@@ -6,6 +6,7 @@
 .parallax-container {
     position: relative;
     height: 100vh;
+    translate: 0 -70px;
     overflow: hidden;
 }
 
@@ -31,10 +32,19 @@
 }
 
 .parallax-title h1 {
-    font-size: 4rem;
+    font-size: 4.1rem;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-align: center;
+    font-weight: bolder;
+}
+
+.parallax-title p {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-weight: bolder;
 }
 
 .parallax-table {
@@ -58,4 +68,26 @@
     height: 100vh;
     background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3));
     z-index: 15;
+}
+
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+}
+
+{{-- ========================= --}}
+{{-- 20. Media Queries         --}}
+{{-- ========================= --}}
+
+@media (max-width: 768px) {
+    .parallax-container {
+        translate: 0 -80px;
+    }
+
+    .parallax-title p {
+        font-size: 1rem;
+    }
+
 }
