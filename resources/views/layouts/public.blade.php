@@ -3,7 +3,7 @@
 @section('title', __('general.public_page'))
 
 @section('content')
-    <main class="flex-grow-1">
+    <main class="flex-grow-1 public-content">
             @if (!Request::is('/'))
                 @include('layouts.partials.breadcrumb')
             @endif

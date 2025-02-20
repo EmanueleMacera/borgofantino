@@ -5,21 +5,21 @@ html {
     letter-spacing: 0.25px;
 }
 
-p {
+.public-content p {
     font-size: 2rem !important;
 }
 
-h1 {
+.public-content h1 {
     font-size: 4.1rem !important;
 }
 
-a {
+.public-content a {
     color: white !important;
     text-decoration: none !important;
 }
 
 
-.btn-primary {
+.public-content .btn-primary {
     border-radius: 25px!important;
 }
 
@@ -377,12 +377,92 @@ font-size:1.2rem!important;
     color: white;
 }
 
+.reach-us-container {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 50px 0;
+}
+
+.separator {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #0056b3, #00a0e9);
+}
+
+.transport-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.transport-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.transport-card:hover {
+    transform: translateY(-5px);
+}
+
+.transport-icon {
+    font-size: 2.5rem;
+    color: #0056b3;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.transport-content h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.airport-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.airport-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.airport-item .time {
+    background: #f8f9fa;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: #0056b3;
+}
+
+.train-routes, .highway-info {
+    line-height: 1.6;
+}
+
+.route-option {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.route-option ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
 
 {{-- ========================= --}}
 {{-- 20. Media Queries         --}}
 {{-- ========================= --}}
 @media (max-width: 992px) {
     .activities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .transport-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -435,5 +515,7 @@ font-size:1.2rem!important;
         justify-content: center;
     }
     
-
+    .transport-grid {
+        grid-template-columns: 1fr;
+    }
 }
