@@ -126,12 +126,6 @@ font-size:1.2rem!important;
     max-width: 150px;
 }
 
-.separator {
-    width: 80px;
-    height: 3px;
-    background: linear-gradient(to right, #a8edea, #fed6e3);
-}
-
 .spa-image-wrapper {
     overflow: hidden;
     border-radius: 15px;
@@ -207,7 +201,7 @@ font-size:1.2rem!important;
     background: rgb(255, 255, 255, 0.4);
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
     max-width: 350px;
     max-height: 450px;
@@ -249,6 +243,10 @@ font-size:1.2rem!important;
 
 .activity-content {
     padding: 20px;
+}
+
+.activities-container h1 {
+    font-weight: bolder;
 }
 
 .activity-content h3 {
@@ -313,7 +311,6 @@ font-size:1.2rem!important;
 .season-tab.active {
     background: #0056b3;
     color: white;
-    box-shadow: 0 5px 15px rgba(0,86,179,0.2);
 }
 
 .season-tab[data-season="summer"].active {
@@ -377,15 +374,21 @@ font-size:1.2rem!important;
     color: white;
 }
 
-.reach-us-container {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    padding: 50px 0;
+{{-- =========================== --}}
+{{-- 2. Homepage Maps            --}}
+{{-- =========================== --}}
+.reach-us-container h1 {
+    font-weight: bolder;
+}
+
+.reach-us-container p {
+    font-size: 1.1rem!important;
 }
 
 .separator {
     width: 80px;
     height: 3px;
-    background: linear-gradient(to right, #0056b3, #00a0e9);
+    background: linear-gradient(45deg, #fff1eb, #ace0f9);
 }
 
 .transport-grid {
@@ -396,10 +399,10 @@ font-size:1.2rem!important;
 }
 
 .transport-card {
-    background: white;
+    background: rgb(255, 255, 255, 0.4);
     border-radius: 15px;
     padding: 30px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
 }
 
@@ -408,15 +411,15 @@ font-size:1.2rem!important;
 }
 
 .transport-icon {
-    font-size: 2.5rem;
-    color: #0056b3;
+    font-size: 2rem;
     margin-bottom: 20px;
     text-align: center;
+    margin-right:0;
 }
 
-.transport-content h3 {
+.transport-content h5 {
     color: #2c3e50;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -437,11 +440,11 @@ font-size:1.2rem!important;
     padding: 5px 10px;
     border-radius: 20px;
     font-size: 0.9em;
-    color: #0056b3;
 }
 
 .train-routes, .highway-info {
     line-height: 1.6;
+    font-size: 1rem!important;
 }
 
 .route-option {

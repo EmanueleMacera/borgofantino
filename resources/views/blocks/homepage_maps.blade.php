@@ -1,8 +1,14 @@
 <div class="container reach-us-container py-5">
     <div class="text-center mb-5">
-        <h1 class="display-4 fw-light">Come Raggiungerci</h1>
+        <h1 class="display-4">Come Raggiungerci</h1>
         <div class="separator mx-auto my-3"></div>
-        <p class="lead">A soli 1010m di altitudine, a un'ora dalla Riviera Ligure e poco più da Montecarlo</p>
+        <p>Una tra le più antiche località turistiche montane, posta a 1010m di altitudine, a un'ora dalla Riviera Ligure e poco più da Montecarlo</p>
+    </div>
+
+    <div class="transport-card">
+        <div class="transport-icon">
+            <i class="fas fa-map"></i><p>Corso Nizza, 54, 12015 Limone Piemonte CN</p>
+        </div>
     </div>
 
     <div class="transport-grid">
@@ -12,7 +18,7 @@
                 <i class="fas fa-plane-departure"></i>
             </div>
             <div class="transport-content">
-                <h3>Aeroporti Vicini</h3>
+                <h5>Aeroporti Vicini</h5>
                 <div class="airport-list">
                     <div class="airport-item">
                         <span class="time">45 min</span>
@@ -40,7 +46,7 @@
                 <i class="fas fa-car"></i>
             </div>
             <div class="transport-content">
-                <h3>In Auto</h3>
+                <h5>In Auto</h5>
                 <div class="highway-info">
                     <p><strong>Autostrada A6 Torino-Savona</strong></p>
                     <p>Uscita: Cuneo Sant'Albano</p>
@@ -54,7 +60,7 @@
                 <i class="fas fa-train"></i>
             </div>
             <div class="transport-content">
-                <h3>In Treno</h3>
+                <h5>In Treno</h5>
                 <div class="train-routes">
                     <p>Linea ferroviaria: <strong>Torino - Cuneo - Ventimiglia</strong></p>
                     <div class="route-option">

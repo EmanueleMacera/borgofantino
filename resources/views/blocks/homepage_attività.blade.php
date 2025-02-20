@@ -1,6 +1,6 @@
 <div class="container activities-container py-5">
     <div class="text-center mb-5">
-        <h1 class="display-4 fw-light">Attività & Avventure a Limone Piemonte</h1>
+        <h1 class="display-4">Attività & Avventure a Limone Piemonte</h1>
         <div class="separator mx-auto my-3"></div>
         <p class="lead">Un paradiso montano per tutte le stagioni</p>
     </div>
