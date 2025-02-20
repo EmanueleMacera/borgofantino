@@ -154,6 +154,7 @@ font-size:1.2rem!important;
     background: #f8f9fa;
     border-radius: 10px;
     transition: all 0.3s ease;
+    align-content: center;
 }
 
 .service-item:hover {
@@ -190,10 +191,110 @@ font-size:1.2rem!important;
     gap: 10px;
 }
 
+.activities-container {
+    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.activity-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+}
+
+.activity-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.activity-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.activity-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.9);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.activity-badge i {
+    font-size: 24px;
+    color: #0056b3;
+}
+
+.activity-content {
+    padding: 20px;
+}
+
+.activity-content h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.activity-features {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.activity-features span {
+    background: #f8f9fa;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.activity-features i {
+    color: #0056b3;
+}
+
+.btn-outline-primary {
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
 
 {{-- ========================= --}}
 {{-- 20. Media Queries         --}}
 {{-- ========================= --}}
+@media (max-width: 992px) {
+    .activities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media (max-width: 768px) {
     .parallax-container {
@@ -202,6 +303,7 @@ font-size:1.2rem!important;
 
     .alloggi-container {
         translate: 0 -50px;
+        margin-bottom: 0;
     }
 
     h1 {
@@ -213,7 +315,23 @@ font-size:1.2rem!important;
     }
 
     a {
-        font-size: 1rem !important;
+        font-size: 0.94rem !important;
     }
+
+
+    .dettagli-container {
+        translate: 0 -50px;
+    }
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        gap: 15px;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+    }
+    
 
 }
