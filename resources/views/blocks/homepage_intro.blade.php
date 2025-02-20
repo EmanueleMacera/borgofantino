@@ -16,11 +16,6 @@
         <button class="btn btn-primary">{{ __('custom.see') }}</button>
         
     </div>
-
-{{-- Contenuto resto della pagina --}}
-<div class="content">
-    <div style="height:100vh"></div>
-</div>
 @endsection
 
 @push('scripts')
