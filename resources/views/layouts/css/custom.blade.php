@@ -1,6 +1,9 @@
 {{-- =========================== --}}
 {{-- 1. Homepage                 --}}
 {{-- =========================== --}}
+html {
+    letter-spacing: 0.25px;
+}
 
 p {
     font-size: 2rem !important;
@@ -83,7 +86,7 @@ h1 {
 }
 
 .alloggi-container {
-    min-height: 100vh;
+    margin-bottom:50px;
     will-change: transform;
     translate: 0 -10px;
 }
@@ -101,9 +104,90 @@ h1 {
     letter-spacing: 0.5px;
 }
 
+.dettagli-container p {
+font-size:1.2rem!important;
+}
+
+.dettagli-container h1 {
+    font-weight: bolder;
+}
+
 .custom-logo-footer {
     width: 100%;
     max-width: 150px;
+}
+
+.separator {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #a8edea, #fed6e3);
+}
+
+.spa-image-wrapper {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.floating-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.9);
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+.service-item {
+    text-align: center;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-item i {
+    font-size: 20px;
+    color: #6c757d;
+    margin-bottom: 8px;
+}
+
+.alert-custom {
+    background: linear-gradient(45deg, #fff1eb, #ace0f9);
+    border: none;
+    border-radius: 10px;
+}
+
+.contact-card {
+    background: #fff;
+    padding: 12px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.contact-card a{
+    color: white;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 

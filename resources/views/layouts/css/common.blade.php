@@ -192,7 +192,7 @@ footer {
 
 {{-- Footer text --}}
 .footer p {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
     margin-bottom: 0.3rem;
     font-weight: 300;
 }
