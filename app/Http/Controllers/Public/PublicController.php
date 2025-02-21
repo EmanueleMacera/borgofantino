@@ -19,24 +19,6 @@ class PublicController extends Controller
      */
     public function showPage(string $slug)
     {
-
-        if ($slug === 'affitti') {
-            $categoryIds = Item::where('status', 'publish')
-            ->pluck('category_id')
-            ->unique();
-    
-            $category = Category::whereIn('id', $categoryIds)
-                ->pluck('type_id')
-                ->unique();
-    
-            $categoryTypes = CategoryType::whereIn('id', $category)
-            ->get();
-    
-            $types = $categoryTypes->unique()->sortBy('name');
-    
-            return view('public.type.index', compact('types'));
-        }
-
         $page = Page::where('slug', $slug)
             ->where('status', 'publish')
             ->firstOrFail();
@@ -59,20 +41,9 @@ class PublicController extends Controller
 
         $blocks = $page->blocks()->orderBy('order')->get();
 
-        $categoryIds = Item::where('status', 'publish')
-        ->pluck('category_id')
-        ->unique();
+        $items = Item::where('status', 'publish')->sortBy('name');
 
-        $category = Category::whereIn('id', $categoryIds)
-            ->pluck('type_id')
-            ->unique();
-
-        $categoryTypes = CategoryType::whereIn('id', $category)
-        ->get();
-
-        $types = $categoryTypes->unique()->sortBy('name');
-
-        return view('public.show', compact('page', 'blocks', 'types'));
+        return view('public.show', compact('page', 'blocks', 'items'));
     }
 
     /**

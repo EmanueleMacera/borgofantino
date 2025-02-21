@@ -14,11 +14,11 @@
         </div>
         <div class="col-md-8">
             <div class="row" id="alloggi-container">
-                @for ($i = 0; $i < 3; $i++)
+                @foreach ($items as $item)
                     <div class="col-md-4 mb-4">
                         <div class="card h-100 shadow">
                             <div class="card-body">
-                                <h3 class="card-title" id="alloggio-nome-{{ $i }}">{{ __('custom.alloggio_name') }} {{ $i }}</h3>
+                                <h3 class="card-title" id="alloggio-nome-{{ $i }}">{{ $item->name }}</h3>
                             </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item" id="alloggio-capacita-{{ $i }}">{{ __('custom.alloggio_capacity') }}:</li>
@@ -28,7 +28,7 @@
                             </div>
                         </div>
                     </div>
-                @endfor
+                @endforeach
             </div>
         </div>
     </div>
