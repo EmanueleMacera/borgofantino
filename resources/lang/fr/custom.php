@@ -92,4 +92,18 @@ return [
     'summer_events_description' => 'Riche calendrier d\'événements, notamment la Sunset Running Race, Granfondo La Via del Sale, Limone Enduro et EADV Adventure Festival.',
     'summer_events_features' => ['Courses', 'Festival'],
 
+    /* Dettagli */
+    'spa_title' => 'Centre de Bien-être & Spa',
+    'spa_image_alt' => 'Spa et espace bien-être',
+    'spa_contact_title' => 'Pour infos et réservations',
+    'spa_description' => 'L\'espace bien-être adjacent à la salle de jeux et directement accessible depuis les espaces communs du complexe, offre votre parcours santé et détente souhaité.',
+    'spa_sauna' => 'Sauna',
+    'spa_hamman' => 'Hamman',
+    'spa_idromassaggio' => 'Hydromassage',
+    'spa_docce_emozionali' => 'Douches émotionnelles',
+    'spa_tisaneria' => 'Tisanerie',
+    'spa_corner_relax' => 'Coin détente',
+    'spa_operators_description' => 'Vous pouvez compter sur la disponibilité d\'opérateurs experts associés au club pour des conseils généraux et des réservations pour des soins personnalisés. Un parcours de relaxation unique et agréable pour un bien-être à cinq sens.',
+    'spa_booking_notice_strong' => 'Note',
+    'spa_booking_notice' => 'Tous les services indiqués sont utilisables exclusivement sur réservation',
 ];
