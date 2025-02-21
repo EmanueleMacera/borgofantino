@@ -40,6 +40,7 @@ return [
 
     /* Attività */
     'activities_title' => 'Attività & Avventure a Limone Piemonte',
+    'activities_description' => 'Un paradiso montano per tutte le stagioni',
     'winter' => 'Inverno',
     'summer' => 'Estate',
     'ski_resort' => 'Riserva Bianca',
