@@ -64,6 +64,7 @@
                 @foreach ($categories as $loc)
                     <option value="{{ $loc->id }}"
                         {{ old('category_id', $item->category_id ?? '') == $loc->id ? 'selected' : '' }}>
+                        {{ $loc->name }} - {{ $loc->type->name }}
                     </option>
                 @endforeach
             </select>
