@@ -452,6 +452,13 @@ font-size:1.2rem!important;
 {{-- ========================= --}}
 {{-- 20. Media Queries         --}}
 {{-- ========================= --}}
+@media (min-width: 1200px) {
+    .row-cols-xl-5 > * {
+        flex: 0 0 auto;
+        width: calc(100% / {{ $items->count() }});
+    }
+}
+
 @media (max-width: 992px) {
     .activities-grid {
         grid-template-columns: repeat(2, 1fr);
