@@ -395,7 +395,6 @@ font-size:1.2rem!important;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-top: 40px;
 }
 
 .transport-card {
@@ -520,5 +519,9 @@ font-size:1.2rem!important;
     
     .transport-grid {
         grid-template-columns: 1fr;
+    }
+
+    .reach-us-container {
+        translate: 0 -50px;
     }
 }

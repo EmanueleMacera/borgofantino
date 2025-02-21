@@ -7,7 +7,7 @@
 
     <div class="transport-card">
         <div class="transport-icon">
-            <i class="fas fa-map"></i><p>Corso Nizza, 54, 12015 Limone Piemonte CN</p>
+            <i class="fas fa-map"></i><p>Corso Nizza, 54, 12015 Limone Piemonte CN<a href="https://www.google.com/maps/place/Borgo+Fantino+Srl/@44.1912727,7.5659938,17z/"> (guarda su maps)</a></p>
         </div>
     </div>
 
@@ -63,13 +63,11 @@
                 <h5>In Treno</h5>
                 <div class="train-routes">
                     <p>Linea ferroviaria: <strong>Torino - Cuneo - Ventimiglia</strong></p>
-                    <div class="route-option">
-                        <p>Da Nizza/Ventimiglia:</p>
-                        <ul>
-                            <li>Treno diretto Ventimiglia-Limone</li>
-                            <li>Oppure: Tende-Limone (30 min)</li>
-                        </ul>
-                    </div>
+                    <p>Da Nizza/Ventimiglia:</p>
+                    <ul>
+                        <li>Treno diretto Ventimiglia-Limone</li>
+                        <li>Oppure: Tende-Limone (30 min)</li>
+                    </ul>
                 </div>
             </div>
         </div>
