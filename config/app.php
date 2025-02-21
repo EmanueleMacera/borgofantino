@@ -160,7 +160,7 @@ return [
         'en' => 'English',
         'it' => 'Italian',
         // 'de' => 'German',
-        // 'fr' => 'French',
+        'fr' => 'French',
         // 'es' => 'Spanish',
         // 'en-US' => 'American',
         // 'zh' => 'Chinese',
