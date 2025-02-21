@@ -1,77 +1,71 @@
 <div class="container reach-us-container py-5">
     <div class="text-center mb-5">
-        <h1 class="display-4">Come Raggiungerci</h1>
+        <h1 class="display-4">{{ __('custom.reach_us_title') }}</h1>
         <div class="separator mx-auto my-3"></div>
-        <p>Una tra le più antiche località turistiche montane, posta a 1010m di altitudine, a un'ora dalla Riviera Ligure e poco più da Montecarlo</p>
+        <p>{{ __('custom.reach_us_description') }}</p>
     </div>
-
     <div class="transport-card">
         <div class="transport-icon">
-            <i class="fas fa-map"></i><p>Corso Nizza, 54, 12015 Limone Piemonte (CN)</p>
+            <i class="fas fa-map"></i>
+            <p>{{ __('custom.address') }}</p>
         </div>
     </div>
-
     <div class="transport-grid">
-        <!-- Aeroporti -->
         <div class="transport-card">
             <div class="transport-icon">
                 <i class="fas fa-plane-departure"></i>
             </div>
             <div class="transport-content">
-                <h5>Aeroporti Vicini</h5>
+                <h5>{{ __('custom.airports_title') }}</h5>
                 <div class="airport-list">
                     <div class="airport-item">
-                        <span class="time">45 min</span>
-                        <span class="name">Cuneo Levaldigi</span>
+                        <span class="time">{{ __('custom.time') }}</span>
+                        <span class="name">{{ __('custom.airport_cuneo') }}</span>
                     </div>
                     <div class="airport-item">
-                        <span class="time">2 ore</span>
-                        <span class="name">Torino Caselle</span>
+                        <span class="time">{{ __('custom.time_2') }}</span>
+                        <span class="name">{{ __('custom.airport_torino') }}</span>
                     </div>
                     <div class="airport-item">
-                        <span class="time">2 ore</span>
-                        <span class="name">Genova Cristoforo Colombo</span>
+                        <span class="time">{{ __('custom.time_2') }}</span>
+                        <span class="name">{{ __('custom.airport_genova') }}</span>
                     </div>
                     <div class="airport-item">
-                        <span class="time">2 ore</span>
-                        <span class="name">Nizza Côte D'Azur</span>
+                        <span class="time">{{ __('custom.time_2') }}</span>
+                        <span class="name">{{ __('custom.airport_nizza') }}</span>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Auto -->
         <div class="transport-card">
             <div class="transport-icon">
                 <i class="fas fa-car"></i>
             </div>
             <div class="transport-content">
-                <h5>In Auto</h5>
+                <h5>{{ __('custom.car_title') }}</h5>
                 <div class="highway-info">
-                    <p><strong>Autostrada A6 Torino-Savona</strong></p>
-                    <p>Uscita: Cuneo Sant'Albano</p>
+                    <p><strong>{{ __('custom.highway') }}</strong></p>
+                    <p>{{ __('custom.highway_exit') }}</p>
                 </div>
             </div>
         </div>
-
-        <!-- Treno -->
         <div class="transport-card">
             <div class="transport-icon">
                 <i class="fas fa-train"></i>
             </div>
             <div class="transport-content">
-                <h5>In Treno</h5>
+                <h5>{{ __('custom.train_title') }}</h5>
                 <div class="train-routes">
-                    <p>Linea ferroviaria: <strong>Torino - Cuneo - Ventimiglia</strong></p>
-                    <p>Da Nizza/Ventimiglia:</p>
+                    <p>{{ __('custom.train_line') }}</p>
+                    <p>{{ __('custom.train_from_nice') }}</p>
                     <div class="airport-list">
                         <div class="airport-item">
-                            <span class="time">Diretto</span>
-                            <span class="name">Ventimiglia - Limone</span>
+                            <span class="time">{{ __('custom.train_direct') }}</span>
+                            <span class="name">{{ __('custom.train_ventimiglia_limone') }}</span>
                         </div>
                         <div class="airport-item">
-                            <span class="time">Linea</span>
-                            <span class="name">Tende - Limone (30 min)</span>
+                            <span class="time">{{ __('custom.train_line_2') }}</span>
+                            <span class="name">{{ __('custom.train_tende_limone') }}</span>
                         </div>
                     </div>
                 </div>

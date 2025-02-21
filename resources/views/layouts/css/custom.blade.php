@@ -1,5 +1,5 @@
 {{-- =========================== --}}
-{{-- 1. Homepage                 --}}
+{{-- 0. General                 --}}
 {{-- =========================== --}}
 html {
     letter-spacing: 0.25px;
@@ -18,12 +18,24 @@ html {
     text-decoration: none !important;
 }
 
-
 .public-content .btn-primary {
     border-radius: 25px!important;
 }
 
+.navbar {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+}
 
+.custom-logo-footer {
+    width: 100%;
+    max-width: 150px;
+}
+
+{{-- =========================== --}}
+{{-- 1. Homepage                 --}}
+{{-- =========================== --}}
 {{-- Intro --}}
 .parallax-container {
     position: relative;
@@ -89,13 +101,7 @@ html {
     z-index: 15;
 }
 
-
-.navbar {
-    background-color: rgba(0, 0, 0, 0.1) !important;
-    backdrop-filter: blur(1.5px);
-    -webkit-backdrop-filter: blur(1.5px);
-}
-
+{{-- Alloggi --}}
 .alloggi-container {
     margin-bottom:50px;
     will-change: transform;
@@ -121,11 +127,7 @@ font-size:1.2rem!important;
     font-weight: bolder;
 }
 
-.custom-logo-footer {
-    width: 100%;
-    max-width: 150px;
-}
-
+{{-- Spa --}}
 .spa-image-wrapper {
     overflow: hidden;
     border-radius: 15px;
@@ -190,6 +192,7 @@ font-size:1.2rem!important;
     gap: 10px;
 }
 
+{{-- Activities --}}
 .activities-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -374,15 +377,13 @@ font-size:1.2rem!important;
     color: white;
 }
 
-{{-- =========================== --}}
-{{-- 2. Homepage Maps            --}}
-{{-- =========================== --}}
+{{-- Maps  --}}
 .reach-us-container h1 {
     font-weight: bolder;
 }
 
 .reach-us-container p {
-    font-size: 1.1rem!important;
+    font-size: 1.2rem!important;
 }
 
 .separator {
@@ -460,15 +461,7 @@ font-size:1.2rem!important;
 }
 
 @media (max-width: 768px) {
-    .parallax-container {
-        translate: 0 -80px;
-    }
-
-    .alloggi-container {
-        translate: 0 -50px;
-        margin-bottom: 0;
-    }
-
+    {{-- General --}}
     h1 {
         font-size: 2.5rem !important;
     }
@@ -481,7 +474,18 @@ font-size:1.2rem!important;
         font-size: 0.94rem !important;
     }
 
+    {{-- Intro --}}
+    .parallax-container {
+        translate: 0 -80px;
+    }
 
+    {{-- Alloggi --}}
+    .alloggi-container {
+        translate: 0 -50px;
+        margin-bottom: 0;
+    }
+
+    {{-- Spa --}}
     .dettagli-container {
         translate: 0 -50px;
     }
@@ -492,6 +496,7 @@ font-size:1.2rem!important;
         gap: 15px;
     }
 
+    {{-- Activities --}}
     .activities-grid {
         grid-template-columns: 1fr;
     }
@@ -507,6 +512,7 @@ font-size:1.2rem!important;
         justify-content: center;
     }
     
+    {{-- Maps --}}
     .transport-grid {
         grid-template-columns: 1fr;
     }
