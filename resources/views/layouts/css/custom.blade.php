@@ -204,7 +204,7 @@ font-size:1.2rem!important;
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
     max-width: 350px;
-    max-height: 450px;
+    max-height: 550px;
 }
 
 .activity-card:hover {
@@ -395,6 +395,7 @@ font-size:1.2rem!important;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-top: 30px;
 }
 
 .transport-card {
@@ -444,17 +445,6 @@ font-size:1.2rem!important;
 .train-routes, .highway-info {
     line-height: 1.6;
     font-size: 1rem!important;
-}
-
-.route-option {
-    margin-top: 15px;
-    padding-top: 15px;
-    border-top: 1px solid #eee;
-}
-
-.route-option ul {
-    margin-top: 10px;
-    padding-left: 20px;
 }
 
 {{-- ========================= --}}

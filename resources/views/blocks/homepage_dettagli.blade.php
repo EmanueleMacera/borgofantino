@@ -17,7 +17,7 @@
             </div>
 
             <div class="contact-card">
-                <h4 class="mb-3"><i class="fas fa-phone-alt me-2"></i>Per info e prenotazioni</h4>
+                <h4 class="mb-3"><i class="fas fa-phone-alt"></i>Per info e prenotazioni</h4>
                 <div class="contact-links">
                     <a href="tel:+393534570629" class="btn btn-primary">
                         +39 353 457 0629
@@ -64,7 +64,7 @@
                 
                 <div class="booking-notice mb-4">
                     <div class="alert alert-custom">
-                        <i class="fas fa-info-circle me-2"></i>
+                        <i class="fas fa-info-circle"></i>
                         <strong>Nota:</strong> Tutti i servizi indicati sono utilizzabili esclusivamente su prenotazione!
                     </div>
                 </div>

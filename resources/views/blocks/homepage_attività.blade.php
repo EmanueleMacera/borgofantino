@@ -25,7 +25,7 @@
                 <!-- Sci -->
         <div class="activity-card">
             <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/sci.jpg') }}" alt="Sci a Limone Piemonte">
+                <img src="{{ asset('assets/custom/activities/sci.WebP') }}" alt="Sci a Limone Piemonte">
                 <div class="activity-badge">
                     <i class="fas fa-skiing"></i>
                 </div>
@@ -49,7 +49,7 @@
         <!-- Pattinaggio -->
         <div class="activity-card">
             <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/pattinaggio.jpg') }}" alt="Pattinaggio sul ghiaccio">
+                <img src="{{ asset('assets/custom/activities/pattinaggio.WebP') }}" alt="Pattinaggio sul ghiaccio">
                 <div class="activity-badge">
                     <i class="fas fa-skating"></i>
                 </div>
@@ -70,7 +70,7 @@
         <!-- Freeride -->
         <div class="activity-card">
             <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/freeride.jpg') }}" alt="Freeride">
+                <img src="{{ asset('assets/custom/activities/freeride.WebP') }}" alt="Freeride">
                 <div class="activity-badge">
                     <i class="fas fa-mountain"></i>
                 </div>
@@ -91,7 +91,7 @@
         <!-- Escursioni sulla neve -->
         <div class="activity-card">
             <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/ciaspole.jpg') }}" alt="Escursioni sulla neve">
+                <img src="{{ asset('assets/custom/activities/ciaspole.WebP') }}" alt="Escursioni sulla neve">
                 <div class="activity-badge">
                     <i class="fas fa-hiking"></i>
                 </div>
@@ -109,7 +109,7 @@
         <!-- Sci di fondo -->
         <div class="activity-card">
             <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/sci-fondo.jpg') }}" alt="Sci di fondo">
+                <img src="{{ asset('assets/custom/activities/sci-fondo.WebP') }}" alt="Sci di fondo">
                 <div class="activity-badge">
                     <i class="fas fa-skiing-nordic"></i>
                 </div>
@@ -130,7 +130,7 @@
         <!-- Snowboard -->
         <div class="activity-card">
             <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/snowboard.jpg') }}" alt="Snowboard">
+                <img src="{{ asset('assets/custom/activities/snowboard.WebP') }}" alt="Snowboard">
                 <div class="activity-badge">
                     <i class="fas fa-snowboarding"></i>
                 </div>
@@ -151,7 +151,7 @@
         <!-- Family -->
         <div class="activity-card">
             <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/family.jpg') }}" alt="Attività per famiglie">
+                <img src="{{ asset('assets/custom/activities/family.WebP') }}" alt="Attività per famiglie">
                 <div class="activity-badge">
                     <i class="fas fa-users"></i>
                 </div>
@@ -170,7 +170,7 @@
         <!-- Eventi -->
         <div class="activity-card">
             <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/eventi.jpg') }}" alt="Eventi">
+                <img src="{{ asset('assets/custom/activities/eventi.WebP') }}" alt="Eventi">
                 <div class="activity-badge">
                     <i class="fas fa-calendar-alt"></i>
                 </div>
@@ -193,7 +193,7 @@
                 <!-- Escursioni -->
                 <div class="activity-card">
                     <div class="activity-image">
-                        <img src="{{ asset('assets/custom/activities/hiking.jpg') }}" alt="Escursioni">
+                        <img src="{{ asset('assets/custom/activities/hiking.WebP') }}" alt="Escursioni">
                         <div class="activity-badge">
                             <i class="fas fa-hiking"></i>
                         </div>
@@ -212,7 +212,7 @@
                 <!-- Mountain Bike -->
                 <div class="activity-card">
                     <div class="activity-image">
-                        <img src="{{ asset('assets/custom/activities/mtb.jpg') }}" alt="Mountain Bike">
+                        <img src="{{ asset('assets/custom/activities/mtb.WebP') }}" alt="Mountain Bike">
                         <div class="activity-badge">
                             <i class="fas fa-bicycle"></i>
                         </div>
@@ -230,7 +230,7 @@
                 <!-- Arrampicata e Rafting -->
                 <div class="activity-card">
                     <div class="activity-image">
-                        <img src="{{ asset('assets/custom/activities/climbing.jpg') }}" alt="Arrampicata">
+                        <img src="{{ asset('assets/custom/activities/climbing.WebP') }}" alt="Arrampicata">
                         <div class="activity-badge">
                             <i class="fas fa-mountain-sun"></i>
                         </div>
@@ -252,7 +252,7 @@
                 <!-- Equitazione -->
                 <div class="activity-card">
                     <div class="activity-image">
-                        <img src="{{ asset('assets/custom/activities/horse.jpg') }}" alt="Equitazione">
+                        <img src="{{ asset('assets/custom/activities/horse.WebP') }}" alt="Equitazione">
                         <div class="activity-badge">
                             <i class="fas fa-horse"></i>
                         </div>
@@ -270,7 +270,7 @@
                 <!-- Via del Sale -->
                 <div class="activity-card">
                     <div class="activity-image">
-                        <img src="{{ asset('assets/custom/activities/via-del-sale.jpg') }}" alt="Via del Sale">
+                        <img src="{{ asset('assets/custom/activities/via-del-sale.WebP') }}" alt="Via del Sale">
                         <div class="activity-badge">
                             <i class="fas fa-road"></i>
                         </div>
@@ -288,7 +288,7 @@
                 <!-- Parchi Naturali -->
                 <div class="activity-card">
                     <div class="activity-image">
-                        <img src="{{ asset('assets/custom/activities/parks.jpg') }}" alt="Parchi Naturali">
+                        <img src="{{ asset('assets/custom/activities/parks.WebP') }}" alt="Parchi Naturali">
                         <div class="activity-badge">
                             <i class="fas fa-tree"></i>
                         </div>
@@ -306,7 +306,7 @@
                 <!-- Attività Famiglia -->
                 <div class="activity-card">
                     <div class="activity-image">
-                        <img src="{{ asset('assets/custom/activities/family-summer.jpg') }}" alt="Attività Famiglia Estate">
+                        <img src="{{ asset('assets/custom/activities/family-summer.WebP') }}" alt="Attività Famiglia Estate">
                         <div class="activity-badge">
                             <i class="fas fa-users"></i>
                         </div>
@@ -325,7 +325,7 @@
                 <!-- Eventi Estate -->
                 <div class="activity-card">
                     <div class="activity-image">
-                        <img src="{{ asset('assets/custom/activities/events-summer.jpg') }}" alt="Eventi Estate">
+                        <img src="{{ asset('assets/custom/activities/events-summer.WebP') }}" alt="Eventi Estate">
                         <div class="activity-badge">
                             <i class="fas fa-calendar-alt"></i>
                         </div>
