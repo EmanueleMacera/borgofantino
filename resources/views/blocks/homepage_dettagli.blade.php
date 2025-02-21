@@ -1,4 +1,4 @@
-<div class="container dettagli-container py-5">
+<div class="container dettagli-container">
     <div class="text-center mb-4">
         <h1 class="display-4">{{ __('custom.spa_title') }}</h1>
         <div class="separator mx-auto my-3"></div>

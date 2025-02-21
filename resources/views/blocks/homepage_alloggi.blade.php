@@ -1,37 +1,100 @@
 <div class="alloggi-container container">
-    <div class="text-center mb-5">
-        <div class="d-flex flex-column justify-content-between h-100">
-            <div>
-                <h1 class="mb-2">{{ __('custom.alloggi_title') }}</h1>
-                <p class="mb-4">{{ __('custom.alloggi_description') }}</p>
-            </div>
-            <div>
-                <a href="#" class="col-md-6 btn btn-primary">{{ __('custom.alloggi_button2') }}</a>
+    <div class="row align-items-center">
+        <div class="col-md-4 mb-4 mb-md-0">
+            <div class="d-flex flex-column justify-content-between h-100">
+                <div>
+                    <h1 class="mb-2">{{ __('custom.alloggi_title') }}</h1>
+                    <p class="mb-4">{{ __('custom.alloggi_description') }}</p>
+                </div>
+                <div>
+                    <a href="#" class="col-md-6 btn btn-primary">{{ __('custom.alloggi_button2') }}</a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 justify-content-center">
-            @foreach ($items as $item)
-                <div class="col">
-                    <div class="card h-100 shadow">
-                        @php
-                            $thumbnail = $item->itemMedia?->firstWhere('type', 'thumbnail');
-                            $thumbnailPath = $thumbnail ? asset('storage/' . $thumbnail->path) : asset('path/to/default/image.jpg');
-                        @endphp
-                        <img src="{{ $thumbnailPath }}" class="card-img-top rounded-top" alt="{{ $item->name }}">
-                        <div class="card-body">
-                            <h5 class="card-title fw-bold" id="name">{{ $item->name }}</h5>
-                            <p class="card-text" id="item-capacity">{{ __('custom.alloggio_capacity') }}: {{ $item->posti_letto }}</p>
+        <div class="col-md-8">
+            <div class="alloggi-slider-container">
+                <div class="alloggi-slider" id="alloggi-slider">
+                    @foreach ($items as $item)
+                        <div class="alloggi-slide">
+                            <div class="card h-100 shadow">
+                                @php
+                                    $thumbnail = $item->itemMedia?->firstWhere('type', 'thumbnail');
+                                    $thumbnailPath = asset('storage/' . $thumbnail->path);
+                                @endphp
+                                @if ($item->thumbnail)
+                                    <img src="{{ $thumbnailPath }}" class="card-img-top rounded-top" alt="{{ $item->name }}">
+                                @endif
+                                <div style="padding: 1rem">
+                                    <h3 class="card-title text-bold" id="name">{{ $item->name }}</h3>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item" id="item-capacity">{{ __('custom.alloggio_capacity') }}: {{ $item->posti_letto }}</li>
+                                </ul>
+                                <div class="card-footer" style="text-align: center">
+                                    <a href="{{ route('public.item.show', ['name' => $item->slug]) }}" class="btn btn-sm w-100 btn-primary" id="item-link"><i class="fas fa-info-circle"></i>{{ __('custom.alloggio_details') }}</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-footer text-center">
-                            <a href="{{ route('public.item.show', ['name' => $item->slug]) }}" class="btn btn-primary w-100" id="item-link">
-                                <i class="fas fa-info-circle me-2"></i>{{ __('custom.alloggio_details') }}
-                            </a>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
-            @endforeach
+                <div class="alloggi-slider-controls">
+                    <button class="slider-arrow prev" id="prev-arrow">&lt;</button>
+                    <button class="slider-arrow next" id="next-arrow">&gt;</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slider = document.getElementById('alloggi-slider');
+        const slides = slider.children;
+        const prevArrow = document.getElementById('prev-arrow');
+        const nextArrow = document.getElementById('next-arrow');
+        const controls = document.querySelector('.alloggi-slider-controls');
+        
+        let currentIndex = 0;
+        const slidesToShow = window.innerWidth > 768 ? 3 : 1;
+    
+        function updateSliderPosition() {
+            slider.style.transform = `translateX(-${currentIndex * (100 / slidesToShow)}%)`;
+        }
+    
+        function showControls() {
+            if (slides.length > slidesToShow) {
+                controls.style.display = 'flex';
+            }
+        }
+    
+        function updateArrowState() {
+            prevArrow.disabled = currentIndex === 0;
+            nextArrow.disabled = currentIndex >= slides.length - slidesToShow;
+        }
+    
+        prevArrow.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSliderPosition();
+                updateArrowState();
+            }
+        });
+    
+        nextArrow.addEventListener('click', () => {
+            if (currentIndex < slides.length - slidesToShow) {
+                currentIndex++;
+                updateSliderPosition();
+                updateArrowState();
+            }
+        });
+    
+        window.addEventListener('resize', () => {
+            currentIndex = 0;
+            updateSliderPosition();
+            updateArrowState();
+        });
+    
+        showControls();
+        updateArrowState();
+    });
+</script>

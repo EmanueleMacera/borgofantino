@@ -102,6 +102,12 @@ html {
 }
 
 {{-- Alloggi --}}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
 .alloggi-container {
     margin-bottom:50px;
     will-change: transform;
@@ -125,6 +131,48 @@ font-size:1.2rem!important;
 
 .dettagli-container h1 {
     font-weight: bolder;
+}
+
+.alloggi-slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.alloggi-slider {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.alloggi-slide {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    padding: 0 15px;
+}
+
+.alloggi-slider-controls {
+    display: none;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.slider-arrow {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    color: #333;
+    cursor: pointer;
+    font-size: 24px;
+    height: 40px;
+    width: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 {{-- Spa --}}
@@ -452,13 +500,6 @@ font-size:1.2rem!important;
 {{-- ========================= --}}
 {{-- 20. Media Queries         --}}
 {{-- ========================= --}}
-@media (min-width: 1200px) {
-    .row-cols-xl-5 > * {
-        flex: 0 0 auto;
-        width: calc(100% / {{ $items->count() }});
-    }
-}
-
 @media (max-width: 992px) {
     .activities-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -491,6 +532,22 @@ font-size:1.2rem!important;
     .alloggi-container {
         translate: 0 -50px;
         margin-bottom: 0;
+    }
+
+    .alloggi-slide {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .alloggi-slider {
+        display: block;
+    }
+    .alloggi-slide {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .alloggi-slider-controls {
+        display: none !important;
     }
 
     {{-- Spa --}}
