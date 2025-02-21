@@ -158,42 +158,6 @@
                     </li>
                 </ul>
             @endif
-
-            <!-- Promozioni -->
-            @if($item->promozioni->count() > 0)
-            <h3 style="margin-bottom: 15px;">{{ __('custom.promo_title') }}</h3>
-            @foreach($item->promozioni as $promozione)
-                <div class="mb-3 p-3 bg-light rounded shadow-sm">
-                    <p class="promo-title">{{ $promozione->title }}</p>
-                    @if($promozione->photo)
-                        <img src="{{ asset('storage/' . $promozione->photo) }}" alt="{{ $promozione->title }}" class="promo-photo img-fluid rounded mb-2">
-                    @endif
-                    <!-- Bottone per aprire il modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#promozioneModal{{ $promozione->id }}">
-                        {{ __('custom.more_info') }}
-                    </button>
-                </div>
-        
-                <!-- Modal per la description della promozione -->
-                <div class="modal fade" id="promozioneModal{{ $promozione->id }}" tabindex="-1" aria-labelledby="promozioneModalLabel{{ $promozione->id }}" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="promozioneModalLabel{{ $promozione->id }}">{{ $promozione->title }}</h5>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="{{ __('custom.close') }}"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p>{{ $promozione->description }}</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{{ __('custom.close') }}</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        @endif
-        
         </div>
     </div>
 

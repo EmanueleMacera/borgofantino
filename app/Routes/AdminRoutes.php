@@ -14,7 +14,6 @@ use App\Http\Controllers\Custom\{
     CategoryController,
     ItemController,
     MediaController,
-    PromozioniController,
 };
 use App\Http\Middleware\EnsureUserIsApproved;
 use App\Http\Middleware\SetLanguage;
@@ -135,10 +134,6 @@ class AdminRoutes
                 Route::delete('/category-types/{type}/delete', [CategoryController::class, 'deleteCategoryType'])->name('category-types.delete');
                 Route::delete('/category-types/{type}/thumbnail', [CategoryController::class, 'destroyThumbnailCategoryType'])->name('categoryTypes.thumbnail.destroy');
 
-                /**
-                 * Promozioni Management
-                 */
-                Route::delete('/items/promo/{promozione}', [PromozioniController::class, 'destroy'])->name('items.promozioni.destroy');
             });
     }
 }

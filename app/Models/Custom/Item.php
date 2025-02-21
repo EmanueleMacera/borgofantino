@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Custom\ItemMedia;
 use App\Models\Custom\Attribute;
 use App\Models\Custom\Category;
-use App\Models\Custom\Promozione;
 
 class Item extends Model
 {
@@ -77,15 +76,5 @@ class Item extends Model
     public function category()
     {
         return $this->belongsTo(Category::class, 'category_id');
-    }
-
-    /**
-     * Define a relationship with the Promozione model.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function promozioni()
-    {
-        return $this->hasMany(Promozione::class);
     }
 }

@@ -7,7 +7,6 @@ use App\Models\Custom\Item;
 use App\Models\Custom\Attribute;
 use App\Models\Custom\Category;
 use App\Models\Custom\ItemMedia;
-use App\Models\Custom\Promozione;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -134,9 +133,6 @@ class ItemController extends Controller
             'posti_letto' => 'nullable|numeric',
             'nei_dintorni' => 'nullable|string',
             'link' => 'nullable|url',
-            'promozioni_title.*' => 'nullable|string|max:255',
-            'promozioni_description.*' => 'nullable|string',
-            'promozioni_photo.*' => 'nullable|image',
         ]);
 
         $data['slug'] = Str::slug($data['name'] ?? '');
@@ -153,20 +149,6 @@ class ItemController extends Controller
 
         if ($request->has('attributes')) {
             $item->attributes()->sync($data['attributes']);
-        }
-
-        if ($request->has('promozioni_title')) {
-            foreach ($request->promozioni_title as $index => $title) {
-                $promoData = [
-                    'item_id' => $item->id,
-                    'title' => $title,
-                    'description' => $request->promozioni_description[$index] ?? null,
-                ];
-                if ($request->hasFile("promozioni_photo") && isset($request->promozioni_photo[$index]) && $request->promozioni_photo[$index]->isValid()) {
-                    $promoData['photo'] = $request->promozioni_photo[$index]->store('promozioni_photo', 'public');
-                }
-                Promozione::create($promoData);
-            }
         }
     }
 

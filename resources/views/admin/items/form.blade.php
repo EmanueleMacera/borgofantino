@@ -221,14 +221,6 @@
             </div>
         </div>
 
-        <!-- Promozioni -->
-        <div id="promozioni-section" class="mt-4">
-            <h3><i class="fas fa-tags"></i>{{__('custom.promo_title')}}</h3>
-            <button type="button" id="add-promo" class="btn btn-secondary">
-                <i class="fas fa-plus"></i>{{__('general.add')}}
-            </button>
-        </div>
-
         <!-- Save Button -->
         <button type="submit" class="btn btn-primary mt-4">
             <i class="fas fa-save"></i>{{ isset($item) ? __('general.update') : __('general.save') }}
@@ -275,35 +267,6 @@
 </div>
 @endsection
 
-@if (!empty($item->promozioni) && $item->promozioni->count() > 0)
-    <hr class="my-5">
-    <h3>{{__('custom.promo_title')}}</h3>
-    <div class="row mb-4">
-        @foreach ($item->promozioni as $promozione)
-            <div class="col-md-6 mb-3">
-                <div class="card">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col-md-4">
-                            <img class="img-fluid custom-img-thumbnail" src="{{ asset('storage/' . $promozione->foto) }}" alt="Foto Promozione" style="width: 100%; height: auto;">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="custom-card-title">{{ $promozione->titolo }}</h5>
-                                <p class="custom-card-text custom-truncate-description">{{ $promozione->descrizione }}</p>
-                                <form action="{{ route('items.promozioni.destroy', $promozione->id) }}" method="POST" onsubmit="return confirm('Sei sicuro di voler eliminare questa promozione?')">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger mt-auto"><i class="fas fa-trash-alt"></i></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        @endforeach
-    </div>
-@endif
-
 @push('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -344,26 +307,6 @@
                     preview.appendChild(img);
                 });
             }
-        });
-
-        document.getElementById('add-promo').addEventListener('click', function() {
-            let promozioniSection = document.getElementById('promozioni-section');
-            let promoDiv = document.createElement('div');
-            promoDiv.classList.add('form-group', 'mt-3');
-            promoDiv.innerHTML = `
-                <label>{{ __('general.photo') }}</label>
-                <input type="file" name="promozioni_foto[]" class="form-control mb-2">
-                <label>{{ __('general.name') }}</label>
-                <input type="text" name="promozioni_titolo[]" class="form-control mb-2">
-                <label>{{ __('general.description') }}</label>
-                <textarea name="promozioni_descrizione[]" class="form-control mb-3" rows="3"></textarea>
-                <button type="button" class="btn btn-danger remove-promo">{{ __('general.remove_button') }}</button>
-            `;
-            promozioniSection.appendChild(promoDiv);
-
-            promoDiv.querySelector('.remove-promo').addEventListener('click', function() {
-                promoDiv.remove();
-            });
         });
     });
 </script>
