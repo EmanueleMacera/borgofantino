@@ -22,9 +22,8 @@ class PublicRoutes
             Route::get('/', [PublicController::class, 'showHome'])->name('home');
 
             // Category Types and Items
-            Route::prefix('affitti')->group(function () {
-                Route::get('/{categoryTypeSlug}/{name}', [PublicController::class, 'showItem'])->name('public.item.show');
-                Route::get('/{categoryTypeSlug}', [PublicController::class, 'showCategoryType'])->name('type.show');
+            Route::prefix('alloggi')->group(function () {
+                Route::get('/{name}', [PublicController::class, 'showItem'])->name('public.item.show');
             });
 
             // Static Content Pages
