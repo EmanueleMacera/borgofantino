@@ -131,6 +131,7 @@ font-size:1.2rem!important;
 .spa-image-wrapper {
     overflow: hidden;
     border-radius: 15px;
+    max-height: 300px;
 }
 
 .floating-badge {
