@@ -10,7 +10,7 @@ return [
     'see' => 'See the accommodations',
 
     /* Alloggi */
-    'alloggi_title' => 'Rental Accommodations',
+    'alloggi_title' => 'Rental Accommodation',
     'alloggi_description' => 'Choose your ideal space',
     'alloggi_button1' => 'Accommodations',
     'alloggi_button2' => 'Contact us',

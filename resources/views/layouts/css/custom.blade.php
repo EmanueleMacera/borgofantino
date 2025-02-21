@@ -10,7 +10,7 @@ html {
 }
 
 .public-content h1 {
-    font-size: 4.1rem !important;
+    font-size: 4rem !important;
 }
 
 .public-content a {
