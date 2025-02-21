@@ -23,167 +23,167 @@
         <div class="season-pane active" id="winter">
             <div class="activities-grid">
                 <!-- Sci -->
-        <div class="activity-card">
-            <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/sci.WebP') }}" alt="Sci a Limone Piemonte">
-                <div class="activity-badge">
-                    <i class="fas fa-skiing"></i>
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="{{ asset('assets/custom/activities/sci.WebP') }}" alt="Sci a Limone Piemonte">
+                        <div class="activity-badge">
+                            <i class="fas fa-skiing"></i>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <h5>Riserva Bianca</h5>
+                        <p>80 km di piste sci ai piedi nel comprensorio delle Alpi Marittime, con accesso da Limone Piemonte, Limonetto e Quota 1400.</p>
+                        <div class="activity-features">
+                            <span><i class="fas fa-mountain"></i>80km piste</span>
+                            <span><i class="fas fa-star"></i>Alpetta Olimpica</span>
+                        </div>
+                        <a href="https://www.riservabianca.it" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i>Visita il sito
+                        </a>
+                        <a href="tel:+390171926254" class="btn btn-primary">
+                            <i class="fas fa-phone-alt"></i>0171-926254
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="activity-content">
-                <h5>Riserva Bianca</h5>
-                <p>80 km di piste sci ai piedi nel comprensorio delle Alpi Marittime, con accesso da Limone Piemonte, Limonetto e Quota 1400.</p>
-                <div class="activity-features">
-                    <span><i class="fas fa-mountain"></i>80km piste</span>
-                    <span><i class="fas fa-star"></i>Alpetta Olimpica</span>
-                </div>
-                <a href="https://www.riservabianca.it" target="_blank" class="btn btn-primary">
-                    <i class="fas fa-external-link-alt"></i>Visita il sito
-                </a>
-                <a href="tel:+390171926254" class="btn btn-primary">
-                    <i class="fas fa-phone-alt"></i>0171-926254
-                </a>
-            </div>
-        </div>
 
-        <!-- Pattinaggio -->
-        <div class="activity-card">
-            <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/pattinaggio.WebP') }}" alt="Pattinaggio sul ghiaccio">
-                <div class="activity-badge">
-                    <i class="fas fa-skating"></i>
+                <!-- Pattinaggio -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="{{ asset('assets/custom/activities/pattinaggio.WebP') }}" alt="Pattinaggio sul ghiaccio">
+                        <div class="activity-badge">
+                            <i class="fas fa-skating"></i>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <h5>Pattinaggio sul Ghiaccio</h5>
+                        <p>Pista di pattinaggio a pochi passi dal centro, con corsi per tutti i livelli, noleggio attrezzatura e assistenza professionale.</p>
+                        <div class="activity-features">
+                            <span><i class="fas fa-graduation-cap"></i>Lezioni</span>
+                            <span><i class="fas fa-shopping-bag"></i>Noleggio</span>
+                        </div>
+                        <a href="tel:+393393822150" class="btn btn-primary">
+                            <i class="fas fa-phone-alt"></i>339 382 2150
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="activity-content">
-                <h5>Pattinaggio sul Ghiaccio</h5>
-                <p>Pista di pattinaggio a pochi passi dal centro, con corsi per tutti i livelli, noleggio attrezzatura e assistenza professionale.</p>
-                <div class="activity-features">
-                    <span><i class="fas fa-graduation-cap"></i>Lezioni</span>
-                    <span><i class="fas fa-shopping-bag"></i>Noleggio</span>
-                </div>
-                <a href="tel:+393393822150" class="btn btn-primary">
-                    <i class="fas fa-phone-alt"></i>339 382 2150
-                </a>
-            </div>
-        </div>
 
-        <!-- Freeride -->
-        <div class="activity-card">
-            <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/freeride.WebP') }}" alt="Freeride">
-                <div class="activity-badge">
-                    <i class="fas fa-mountain"></i>
+                <!-- Freeride -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="{{ asset('assets/custom/activities/freeride.WebP') }}" alt="Freeride">
+                        <div class="activity-badge">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <h5>Freeride</h5>
+                        <p>Esperienza unica con guide alpine UIAGM tra ripidi couloirs, pendii incontaminati e caratteristici boschetti di faggio.</p>
+                        <div class="activity-features">
+                            <span><i class="fas fa-helicopter"></i>Eliski</span>
+                            <span><i class="fas fa-user-shield"></i>Guide UIAGM</span>
+                        </div>
+                        <a href="http://www.guidealpinepiemonte.it" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i>Scopri di più
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="activity-content">
-                <h5>Freeride</h5>
-                <p>Esperienza unica con guide alpine UIAGM tra ripidi couloirs, pendii incontaminati e caratteristici boschetti di faggio.</p>
-                <div class="activity-features">
-                    <span><i class="fas fa-helicopter"></i>Eliski</span>
-                    <span><i class="fas fa-user-shield"></i>Guide UIAGM</span>
-                </div>
-                <a href="http://www.guidealpinepiemonte.it" target="_blank" class="btn btn-primary">
-                    <i class="fas fa-external-link-alt"></i>Scopri di più
-                </a>
-            </div>
-        </div>
 
-        <!-- Escursioni sulla neve -->
-        <div class="activity-card">
-            <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/ciaspole.WebP') }}" alt="Escursioni sulla neve">
-                <div class="activity-badge">
-                    <i class="fas fa-hiking"></i>
+                <!-- Escursioni sulla neve -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="{{ asset('assets/custom/activities/ciaspole.WebP') }}" alt="Escursioni sulla neve">
+                        <div class="activity-badge">
+                            <i class="fas fa-hiking"></i>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <h5>Escursioni sulla Neve</h5>
+                        <p>Passeggiate rilassanti con ciaspole attraverso boschi incontaminati, con viste mozzafiato sul Colle di Tenda.</p>
+                        <div class="activity-features">
+                            <span><i class="fas fa-tree"></i>Percorsi naturalistici</span>
+                            <span><i class="fas fa-shoe-prints"></i>Ciaspolate</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="activity-content">
-                <h5>Escursioni sulla Neve</h5>
-                <p>Passeggiate rilassanti con ciaspole attraverso boschi incontaminati, con viste mozzafiato sul Colle di Tenda.</p>
-                <div class="activity-features">
-                    <span><i class="fas fa-tree"></i>Percorsi naturalistici</span>
-                    <span><i class="fas fa-shoe-prints"></i>Ciaspolate</span>
-                </div>
-            </div>
-        </div>
 
-        <!-- Sci di fondo -->
-        <div class="activity-card">
-            <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/sci-fondo.WebP') }}" alt="Sci di fondo">
-                <div class="activity-badge">
-                    <i class="fas fa-skiing-nordic"></i>
+                <!-- Sci di fondo -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="{{ asset('assets/custom/activities/sci-fondo.WebP') }}" alt="Sci di fondo">
+                        <div class="activity-badge">
+                            <i class="fas fa-skiing-nordic"></i>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <h5>Sci di Fondo</h5>
+                        <p>5km di piste per principianti e 8km per esperti, con noleggio attrezzatura e istruttori qualificati.</p>
+                        <div class="activity-features">
+                            <span><i class="fas fa-route"></i>13km totali</span>
+                            <span><i class="fas fa-user-graduate"></i>Istruttori</span>
+                        </div>
+                        <a href="http://www.alpioccidentali.it/ski_limone.htm" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i>Maggiori informazioni
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="activity-content">
-                <h5>Sci di Fondo</h5>
-                <p>5km di piste per principianti e 8km per esperti, con noleggio attrezzatura e istruttori qualificati.</p>
-                <div class="activity-features">
-                    <span><i class="fas fa-route"></i>13km totali</span>
-                    <span><i class="fas fa-user-graduate"></i>Istruttori</span>
-                </div>
-                <a href="http://www.alpioccidentali.it/ski_limone.htm" target="_blank" class="btn btn-primary">
-                    <i class="fas fa-external-link-alt"></i>Maggiori informazioni
-                </a>
-            </div>
-        </div>
 
-        <!-- Snowboard -->
-        <div class="activity-card">
-            <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/snowboard.WebP') }}" alt="Snowboard">
-                <div class="activity-badge">
-                    <i class="fas fa-snowboarding"></i>
+                <!-- Snowboard -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="{{ asset('assets/custom/activities/snowboard.WebP') }}" alt="Snowboard">
+                        <div class="activity-badge">
+                            <i class="fas fa-snowboarding"></i>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <h5>Snowpark</h5>
+                        <p>300m x 30m di pura adrenalina con rail, box e jump progettati da Doors Snowpark Structure.</p>
+                        <div class="activity-features">
+                            <span><i class="fas fa-ruler"></i>300m lunghezza</span>
+                            <span><i class="fas fa-dice-d6"></i>Rail & Box</span>
+                        </div>
+                        <a href="http://www.snowparkdoors.com" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i>Visita lo Snowpark
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="activity-content">
-                <h5>Snowpark</h5>
-                <p>300m x 30m di pura adrenalina con rail, box e jump progettati da Doors Snowpark Structure.</p>
-                <div class="activity-features">
-                    <span><i class="fas fa-ruler"></i>300m lunghezza</span>
-                    <span><i class="fas fa-dice-d6"></i>Rail & Box</span>
-                </div>
-                <a href="http://www.snowparkdoors.com" target="_blank" class="btn btn-primary">
-                    <i class="fas fa-external-link-alt"></i>Visita lo Snowpark
-                </a>
-            </div>
-        </div>
 
-        <!-- Family -->
-        <div class="activity-card">
-            <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/family.WebP') }}" alt="Attività per famiglie">
-                <div class="activity-badge">
-                    <i class="fas fa-users"></i>
+                <!-- Family -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="{{ asset('assets/custom/activities/family.WebP') }}" alt="Attività per famiglie">
+                        <div class="activity-badge">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <h5>Attività per Famiglie</h5>
+                        <p>Kinder Park con tapis roulant, corsi specifici per bambini e numerose attività sulla neve per tutta la famiglia.</p>
+                        <div class="activity-features">
+                            <span><i class="fas fa-child"></i>Kinder Park</span>
+                            <span><i class="fas fa-sleigh"></i>Slittino</span>
+                            <span><i class="fas fa-snowman"></i>Area giochi</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="activity-content">
-                <h5>Attività per Famiglie</h5>
-                <p>Kinder Park con tapis roulant, corsi specifici per bambini e numerose attività sulla neve per tutta la famiglia.</p>
-                <div class="activity-features">
-                    <span><i class="fas fa-child"></i>Kinder Park</span>
-                    <span><i class="fas fa-sleigh"></i>Slittino</span>
-                    <span><i class="fas fa-snowman"></i>Area giochi</span>
-                </div>
-            </div>
-        </div>
 
-        <!-- Eventi -->
-        <div class="activity-card">
-            <div class="activity-image">
-                <img src="{{ asset('assets/custom/activities/eventi.WebP') }}" alt="Eventi">
-                <div class="activity-badge">
-                    <i class="fas fa-calendar-alt"></i>
+                <!-- Eventi -->
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="{{ asset('assets/custom/activities/eventi.WebP') }}" alt="Eventi">
+                        <div class="activity-badge">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                    </div>
+                    <div class="activity-content">
+                        <h5>Eventi</h5>
+                        <p>Ricco calendario di eventi culturali e sportivi durante tutto l'anno per ogni tipo di interesse.</p>
+                        <div class="activity-features">
+                            <span><i class="fas fa-theater-masks"></i>Cultura</span>
+                            <span><i class="fas fa-trophy"></i>Sport</span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="activity-content">
-                <h5>Eventi</h5>
-                <p>Ricco calendario di eventi culturali e sportivi durante tutto l'anno per ogni tipo di interesse.</p>
-                <div class="activity-features">
-                    <span><i class="fas fa-theater-masks"></i>Cultura</span>
-                    <span><i class="fas fa-trophy"></i>Sport</span>
-                </div>
-            </div>
-        </div>
             </div>
         </div>
 
@@ -247,7 +247,6 @@
                         </a>
                     </div>
                 </div>
-<!-- Continuazione delle card estive -->
 
                 <!-- Equitazione -->
                 <div class="activity-card">
