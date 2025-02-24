@@ -114,5 +114,7 @@ return [
     'beds' => 'Posti Letto',
     'bathrooms' => 'Bagni',
     'nearby' => 'Nelle Vicinanze',
+    'show_price' => 'Scopri le disponibilità',
+    'select_dates' => 'Vai alla selezione delle date',
 
 ];

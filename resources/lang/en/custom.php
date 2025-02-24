@@ -114,5 +114,7 @@ return [
     'beds' => 'Beds',
     'bathrooms' => 'Bathrooms',
     'nearby' => 'Nearby',
+    'show_price' => 'Discover availability',
+    'select_dates' => 'Go to date selection',
 
 ];
