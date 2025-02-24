@@ -41,10 +41,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ route('css.common') }}?v={{ optional($style->updated_at)->timestamp }}">
     <link rel="stylesheet" href="{{ route('css.custom') }}?v={{ config('app.version') }}">
-    
-    <!-- JavaScript (defer/async per migliori prestazioni) -->
-    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <!-- JavaScript  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Google Analytics -->
 

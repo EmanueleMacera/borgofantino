@@ -4,27 +4,58 @@
 
 @section('public-content')
 <div class="container custom-width">
-   <div class="card mb-4">
-        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+    <div class="card mb-4">
+        <div class="row">
             @if($item->itemMedia && $item->itemMedia->isNotEmpty())
                 @foreach($item->itemMedia as $index => $photo)
-                    <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
-                        <img src="{{ asset('storage/' . $photo->path) }}" alt="{{ $item->name }}" class="d-block item-gallery w-100">
+                    <div class="col-md-3 mb-3">
+                        <a href="#" data-toggle="modal" data-target="#galleryModal" data-slide-to="{{ $index }}">
+                            <img src="{{ asset('storage/' . $photo->path) }}" alt="{{ $item->name }}" class="img-fluid item-gallery">
+                        </a>
                     </div>
                 @endforeach
+            @else
+                <div class="col-12">
+                    <p>{{ __('custom.no_images') }}</p>
+                </div>
             @endif
-            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev" 
-            onkeydown="if(event.key === 'Enter' || event.key === ' ') this.click();">
-             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-             <span class="sr-only">{{ __('custom.prev') }}</span>
-            </a>
-            
-            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next" 
-                onkeydown="if(event.key === 'Enter' || event.key === ' ') this.click();">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">{{ __('custom.next') }}</span>
-            </a>
         </div>
+
+        <!-- Modale Galleria -->
+        <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="galleryModalLabel">{{ $item->name }}</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                @if($item->itemMedia && $item->itemMedia->isNotEmpty())
+                                    @foreach($item->itemMedia as $index => $photo)
+                                        <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                                            <img src="{{ asset('storage/' . $photo->path) }}" class="d-block w-100" alt="{{ $item->name }}">
+                                        </div>
+                                    @endforeach
+                                @endif
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">{{ __('custom.prev') }}</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">{{ __('custom.next') }}</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         
         <div class="row card-house d-flex align-items-start">
             <div class="col-12 col-md-10">
@@ -179,6 +210,15 @@
 @push('scripts')
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#galleryModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var slideTo = button.data('slide-to') // Extract info from data-* attributes
+        $('#carouselExampleControls').carousel(slideTo);
+    })
+});
+</script>
 <script>
     var map;
     

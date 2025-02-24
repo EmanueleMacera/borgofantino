@@ -94,9 +94,9 @@ class PublicController extends Controller
      * @param  string  $itemSlug
      * @return \Illuminate\View\View
      */
-    public function showItem(string $categoryTypeSlug, string $name)
+    public function showItem(string $name)
     {
-        $item = Item::where('name', $name)
+        $item = Item::where('slug', $name)
             ->where('status', 'publish')
             ->with([
                 'category',
