@@ -148,7 +148,7 @@ return [
     'resources' => '资源',
     'about_us' => '关于我们',
     'about_us_description' => '我们致力于提供高质量的解决方案和服务。',
-    'company_name' => 'Emanuele Macera for Dolidays Srl',
+    'company_name' => 'Emanuele Macera for <a href="www.dolidays.com">Dolidays Srl</a>',
     'all_rights_reserved' => '保留所有权利。',
 
     /************************************************
