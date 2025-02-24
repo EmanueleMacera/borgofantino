@@ -106,4 +106,12 @@ return [
     'spa_operators_description' => 'Vous pouvez compter sur la disponibilité d\'opérateurs experts associés au club pour des conseils généraux et des réservations pour des soins personnalisés. Un parcours de relaxation unique et agréable pour un bien-être à cinq sens.',
     'spa_booking_notice_strong' => 'Note',
     'spa_booking_notice' => 'Tous les services indiqués sont utilisables exclusivement sur réservation',
+
+    /* Alloggi */
+    'info' => 'Info',
+    'services' => 'Services',
+    'rooms' => 'Chambres',
+    'beds' => 'Lits',
+    'bathrooms' => 'Bains',
+    'nearby' => 'À proximité',
 ];

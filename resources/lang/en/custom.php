@@ -106,5 +106,13 @@ return [
     'spa_operators_description' => 'You can count on the availability of expert operators associated with the club for general advice and reservations for personalized treatments. A unique and pleasant relaxation path for five-sense well-being.',
     'spa_booking_notice_strong' => 'Note',
     'spa_booking_notice' => 'All indicated services can be used exclusively by reservation',
+    
+    /* Alloggi */
+    'info' => 'Info',
+    'services' => 'Services',
+    'rooms' => 'Rooms',
+    'beds' => 'Beds',
+    'bathrooms' => 'Bathrooms',
+    'nearby' => 'Nearby',
 
 ];

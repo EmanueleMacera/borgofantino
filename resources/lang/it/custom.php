@@ -107,4 +107,12 @@ return [
     'spa_booking_notice_strong' => 'Nota',
     'spa_booking_notice' => 'Tutti i servizi indicati sono utilizzabili esclusivamente su prenotazione',
 
+    /* Alloggi */
+    'info' => 'Info',
+    'services' => 'Servizi',
+    'rooms' => 'Stanze',
+    'beds' => 'Posti Letto',
+    'bathrooms' => 'Bagni',
+    'nearby' => 'Nelle Vicinanze',
+
 ];
