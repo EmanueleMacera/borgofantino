@@ -6,8 +6,8 @@
                     <h1 class="mb-2">{{ __('custom.alloggi_title') }}</h1>
                     <p class="mb-4">{{ __('custom.alloggi_description') }}</p>
                 </div>
-                <div>
-                    <a href="#" class="col-md-6 alloggi-btn btn btn-primary">{{ __('custom.alloggi_button2') }}</a>
+                <div class="alloggi-btn">
+                    <a href="#" class="col-md-6 btn btn-primary">{{ __('custom.alloggi_button2') }}</a>
                 </div>
             </div>
         </div>
