@@ -648,6 +648,7 @@ font-size:1.2rem!important;
         justify-content: center;
         display: flex;
         justify-self: center;
+        width: 100%;
     }
 
     .alloggi-container {
