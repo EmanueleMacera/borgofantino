@@ -148,7 +148,7 @@ return [
     'resources' => 'Resources',
     'about_us' => 'About Us',
     'about_us_description' => 'We are committed to providing high-quality solutions and services.',
-    'company_name' => 'Emanuele Macera for <a href="www.dolidays.com">Dolidays Srl</a>',
+    'company_name' => ['Emanuele Macera for <a href="www.dolidays.com">Dolidays Srl</a>'],
     'all_rights_reserved' => 'All rights reserved.',
 
     /************************************************
