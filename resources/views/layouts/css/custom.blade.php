@@ -5,20 +5,20 @@ html {
     letter-spacing: 0.25px;
 }
 
-.public-content p {
+.home-content p {
     font-size: 2rem !important;
 }
 
-.public-content h1 {
+.home-content h1 {
     font-size: 4rem !important;
 }
 
-.public-content a {
+.home-content a {
     color: white !important;
     text-decoration: none !important;
 }
 
-.public-content .btn-primary {
+.home-content .btn-primary {
     border-radius: 25px!important;
 }
 
@@ -205,10 +205,11 @@ font-size:1.2rem!important;
 .service-item {
     text-align: center;
     padding: 10px;
-    background: #f8f9fa;
     border-radius: 10px;
     transition: all 0.3s ease;
     align-content: center;
+    background: rgb(255, 255, 255, 0.4);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 20px;
 }
 
 .service-item:hover {
@@ -218,7 +219,7 @@ font-size:1.2rem!important;
 
 .service-item i {
     font-size: 20px;
-    color: #6c757d;
+    color: rgb(0, 0, 0, 0.75);
     margin-bottom: 8px;
 }
 
@@ -402,7 +403,15 @@ font-size:1.2rem!important;
     color: #ff6b6b;
 }
 
+#summer .activity-features i {
+    color: #ff6b6b;
+}
+
 #winter .activity-badge i {
+    color: #4dabf7;
+}
+
+#winter .activity-features i {
     color: #4dabf7;
 }
 
@@ -501,9 +510,107 @@ font-size:1.2rem!important;
 {{-- 10. Alloggi               --}}
 {{-- ========================= --}}
 .item-gallery {
+    border-radius: 0.5rem;
     height: 100%;
     object-fit: cover;
 }
+
+.modal-content {
+    background: none;
+    border: none;
+}
+
+.modal-header {
+    display: none;
+}
+
+.modal-footer {
+    display: none;
+}
+
+.content-main {
+    padding-right: 2rem;
+}
+
+.content-section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.1px solid var(--tertiary-color);
+}
+
+.card-house {
+    padding-left: 0.55rem;
+}
+.section-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.section-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.sidebar {
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.info-card, .price-card {
+    background: rgb(255, 255, 255, 0.4);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.info-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.info-list i {
+    color: rgb(0, 0, 0, 0.75);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    text-align: center;
+    background-color: var(--btn-bg-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-block:hover {
+    background-color: var(--btn-hover-bg-color:);
+}
+
 
 {{-- ========================= --}}
 {{-- 20. Media Queries         --}}
@@ -537,6 +644,12 @@ font-size:1.2rem!important;
     }
 
     {{-- Alloggi --}}
+    .alloggi-btn {
+        justify-content: center;
+        display: flex;
+        justify-self: center;
+    }
+
     .alloggi-container {
         translate: 0 -50px;
         margin-bottom: 0;
@@ -570,6 +683,10 @@ font-size:1.2rem!important;
     }
 
     {{-- Activities --}}
+    .activities-container {
+        translate: 0 -50px;
+    }
+
     .activities-grid {
         grid-template-columns: 1fr;
     }
@@ -586,6 +703,10 @@ font-size:1.2rem!important;
     }
     
     {{-- Maps --}}
+    .reach-us-container {
+        translate: 0 -50px;
+    }
+
     .transport-grid {
         grid-template-columns: 1fr;
     }

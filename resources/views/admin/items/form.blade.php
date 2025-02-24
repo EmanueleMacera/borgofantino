@@ -210,7 +210,7 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="form-check mb-2">
                             @php
-                                $selectedAttributes = $item->attributes ? $item->attributes->pluck('id')->toArray() : [];
+                                $selectedAttributes = $item?->attributes?->pluck('id')->toArray() ?? [];
                             @endphp
 
                             <input type="checkbox" id="attribute_{{ $attributo->id }}" name="attributes[]" value="{{ $attributo->id }}"

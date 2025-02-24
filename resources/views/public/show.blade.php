@@ -3,14 +3,16 @@
 @section('title', $page->title)
 
 @section('public-content')
-    @foreach($blocks as $block)
-        @php
-            $view = 'blocks.' . $block->type;
-        @endphp
+    <div class="home-content">
+        @foreach($blocks as $block)
+            @php
+                $view = 'blocks.' . $block->type;
+            @endphp
 
-        @if (view()->exists($view))
-            @include($view, ['block' => $block])
-        @endif
+            @if (view()->exists($view))
+                @include($view, ['block' => $block])
+            @endif
 
-    @endforeach
+        @endforeach
+    </div>
 @endsection
