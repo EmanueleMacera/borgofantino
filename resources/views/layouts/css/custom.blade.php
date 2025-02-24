@@ -644,7 +644,7 @@ font-size:1.2rem!important;
     }
 
     {{-- Alloggi --}}
-    .alloggi-btn {
+    .alloggi-b {
         justify-content: center;
         display: flex;
         justify-self: center;
