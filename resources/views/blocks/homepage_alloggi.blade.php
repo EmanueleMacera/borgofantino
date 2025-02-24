@@ -31,6 +31,7 @@
                                     <li class="list-group-item" id="item-capacity">{{ __('custom.alloggio_capacity') }}: {{ $item->posti_letto }}</li>
                                 </ul>
                                 <div class="card-footer" style="text-align: center">
+                                    <!--<a href="{{ route('public.item.show', ['name' => $item->slug]) }}" class="btn btn-sm w-100 btn-primary" id="item-link"><i class="fas fa-info-circle"></i>{{ __('custom.alloggio_details') }}</a>-->
                                     <a href="{{ route('public.item.show', ['name' => $item->slug]) }}" class="btn btn-sm w-100 btn-primary" id="item-link"><i class="fas fa-info-circle"></i>{{ __('custom.alloggio_details') }}</a>
                                 </div>
                             </div>
