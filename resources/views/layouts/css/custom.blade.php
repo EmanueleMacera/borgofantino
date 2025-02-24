@@ -528,19 +528,11 @@ font-size:1.2rem!important;
     display: none;
 }
 
-.content-main {
-    padding-right: 2rem;
-}
-
 .content-section {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
+    padding: 1rem;
     border-bottom: 0.1px solid var(--tertiary-color);
 }
 
-.card-house {
-    padding-left: 0.55rem;
-}
 .section-title {
     font-size: 1.8rem;
     color: #333;

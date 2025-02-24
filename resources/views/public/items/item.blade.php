@@ -5,7 +5,7 @@
 @section('public-content')
     <div class="row container" style="place-self: center;">
         <div class="col-lg-9">
-            <div class="card mb-4" style="background: rgb(255, 255, 255, 0.4); box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 20px;">
+            <div class="mb-4">
                 <!-- Carousel per dispositivi mobili (nascosto su desktop) -->
                 <div id="carouselExampleControlsMobile" class="carousel mb-2 slide d-md-none" data-ride="carousel" data-interval="3000">
                     <div class="carousel-inner">
@@ -29,7 +29,7 @@
                 <!-- Fine Carousel Mobile -->
 
                 <!-- Griglia di Immagini Desktop -->
-                <div class="row d-none d-md-flex" style="padding: 10px;">
+                <div class="row d-none d-md-flex">
                     @if($item->itemMedia && $item->itemMedia->isNotEmpty())
                         @php
                             $maxPhotos = 8;
@@ -41,7 +41,7 @@
                                     // Calcola le dimensioni delle colonne in base all'indice
                                     $colSize = ($count >= 4 && $count % 2 !== 0) || ($count < 4 && $count % 2 === 0) ? 4 : 2;
                                 @endphp
-                                <div class="col-md-{{ $colSize }} mb-4">
+                                <div class="col-md-{{ $colSize }} mb-2" style="padding-left: 0.25rem; padding-right: 0.25rem">
                                     <a href="#" data-toggle="modal" data-target="#galleryModal" data-slide-to="{{ $index }}">
                                         <img data-src="{{ asset('storage/' . $photo->path) }}" alt="{{ $item->name }}" class="img-fluid item-gallery lozad" loading="lazy">
                                     </a>
@@ -96,7 +96,7 @@
                     </div>
                 </div>
                 <!-- Fine Modale Galleria -->
-                <div class="row card-house d-flex align-items-start">
+                <div class="row info-card d-flex align-items-start">
                     <div class="col-12 col-md-10">
                         <h1>{{ $item->name }}</h1>
                         <p class="text-muted">
@@ -129,7 +129,7 @@
         </div>
     </div>
     <div class="row container mb-4" style="place-self: center;">
-        <div class="col-lg-9 content-main">
+        <div class="col-lg-9">
             @if (!empty($item->description))
                 <section class="content-section">
                     <h2 class="section-title">{{ __('general.description') }}</h2>
@@ -142,20 +142,22 @@
                     <p class="section-text">{!! $item->nei_dintorni !!}</p>
                 </section>
             @endif
+            <section class="content-section">
+                <h2 class="section-title">Mappa</h2>
+                <div id="map" style="height: 300px;"></div>
+            </section>
         </div>
-        <div class="col-lg-3 content-main">
+        <div class="col-lg-3">
             @if (!empty($item->attributes))
-                <section class="content-section">
-                    <h2 class="section-title">{{ __('custom.services') }}</h2>
-                    <div class="services-grid">
-                        @foreach ($item->attributes as $attributo)
-                            <div class="service-item">
-                                <i class="{{ $attributo->icon }}" aria-hidden="true"></i>
-                                <span>{{ $attributo->name }}</span>
-                            </div>
-                        @endforeach
-                    </div>
-                </section>
+                <h2 class="section-title">{{ __('custom.services') }}</h2>
+                <div class="services-grid">
+                    @foreach ($item->attributes as $attributo)
+                        <div class="service-item">
+                            <i class="{{ $attributo->icon }}" aria-hidden="true"></i>
+                            <span>{{ $attributo->name }}</span>
+                        </div>
+                    @endforeach
+                </div>
             @endif
         </div>
     </div>
@@ -163,12 +165,13 @@
 @endsection
 
 @push('scripts')
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script>
         const observer = lozad();
         observer.observe();
     </script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -183,6 +186,19 @@
         document.addEventListener('DOMContentLoaded', function () {
             const observer = lozad();
             observer.observe();
+        });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var map = L.map('map').setView([{{ $item->latitude }}, {{ $item->longitude }}], 13);
+
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            var marker = L.marker([{{ $item->latitude }}, {{ $item->longitude }}]).addTo(map);
         });
     </script>
 @endpush

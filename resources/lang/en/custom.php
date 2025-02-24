@@ -98,7 +98,7 @@ return [
     'spa_contact_title' => 'For info and reservations',
     'spa_description' => 'The wellness area adjacent to the games room and directly accessible from the common areas of the complex offers your desired health & relaxation path.',
     'spa_sauna' => 'Sauna',
-    'spa_hamman' => 'Hamman',
+    'spa_hamman' => 'Steam Bath',
     'spa_idromassaggio' => 'Hydromassage',
     'spa_docce_emozionali' => 'Emotional showers',
     'spa_tisaneria' => 'Herbal tea area',

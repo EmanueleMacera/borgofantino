@@ -98,7 +98,7 @@ return [
     'spa_contact_title' => 'Per info e prenotazioni',
     'spa_description' => 'Lo spazio benessere attiguo alla sala ludica e direttamente accessibile dalle zone comuni del complesso, offre il vostro desiderato percorso salute & relax.',
     'spa_sauna' => 'Sauna',
-    'spa_hamman' => 'Hamman',
+    'spa_hamman' => 'Bagno Turco',
     'spa_idromassaggio' => 'Idromassaggio',
     'spa_docce_emozionali' => 'Docce emozionali',
     'spa_tisaneria' => 'Tisaneria',

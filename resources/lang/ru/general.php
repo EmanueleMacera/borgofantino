@@ -148,7 +148,7 @@ return [
     'resources' => 'Ресурсы',
     'about_us' => 'О нас',
     'about_us_description' => 'Мы стремимся предоставлять высококачественные решения и услуги.',
-    'company_name' => 'Emanuele Macera',
+    'company_name' => 'Emanuele Macera for Dolidays Srl',
     'all_rights_reserved' => 'Все права защищены.',
 
     /************************************************

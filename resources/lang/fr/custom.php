@@ -98,7 +98,7 @@ return [
     'spa_contact_title' => 'Pour infos et réservations',
     'spa_description' => 'L\'espace bien-être adjacent à la salle de jeux et directement accessible depuis les espaces communs du complexe, offre votre parcours santé et détente souhaité.',
     'spa_sauna' => 'Sauna',
-    'spa_hamman' => 'Hamman',
+    'spa_hamman' => 'Bain turc',
     'spa_idromassaggio' => 'Hydromassage',
     'spa_docce_emozionali' => 'Douches émotionnelles',
     'spa_tisaneria' => 'Tisanerie',
