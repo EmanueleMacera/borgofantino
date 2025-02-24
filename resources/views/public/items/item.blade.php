@@ -111,9 +111,9 @@
                 <div class="info-card">
                     <h3 class="card-title">{{ __('custom.info') }}</h3>
                     <ul class="info-list">
-                        <li><i class="fa-solid fa-people-roof"></i> {{ __('custom.rooms') }} {{ $item->camere }}</li>
-                        <li><i class="fa-solid fa-bath"></i> {{ __('custom.bathrooms') }} {{ $item->bagni }}</li>
-                        <li><i class="fa-solid fa-bed"></i> {{ __('custom.beds') }} {{ $item->posti_letto }}</li>
+                        <li><i class="fa-solid fa-people-roof"></i>{{ __('custom.rooms') }}: {{ $item->camere }}</li>
+                        <li><i class="fa-solid fa-bath"></i>{{ __('custom.bathrooms') }}: {{ $item->bagni }}</li>
+                        <li><i class="fa-solid fa-bed"></i>{{ __('custom.beds') }}: {{ $item->posti_letto }}</li>
                     </ul>
                 </div>
             @endif
@@ -143,7 +143,6 @@
                 </section>
             @endif
             <section class="content-section">
-                <h2 class="section-title">Mappa</h2>
                 <div id="map" style="height: 300px;"></div>
             </section>
         </div>
