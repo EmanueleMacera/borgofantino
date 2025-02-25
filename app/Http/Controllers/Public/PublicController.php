@@ -25,7 +25,9 @@ class PublicController extends Controller
 
         $blocks = $page->blocks()->orderBy('order')->get();
 
-        return view('public.show', compact('page', 'blocks'));
+        $items = Item::where('status', 'publish')->orderBy('id')->get();
+
+        return view('public.show', compact('page', 'blocks', 'items'));
     }
 
     /**
@@ -41,7 +43,7 @@ class PublicController extends Controller
 
         $blocks = $page->blocks()->orderBy('order')->get();
 
-        $items = Item::where('status', 'publish')->orderBy('name')->get();
+        $items = Item::where('status', 'publish')->orderBy('id')->get();
 
         return view('public.show', compact('page', 'blocks', 'items'));
     }
