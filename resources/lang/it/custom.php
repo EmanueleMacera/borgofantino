@@ -108,12 +108,12 @@ return [
     'spa_booking_notice' => 'Tutti i servizi indicati sono utilizzabili esclusivamente su prenotazione',
 
     /* Alloggi */
-    'info' => 'Info',
+    'info' => 'Info Generali',
     'services' => 'Servizi',
     'rooms' => 'Stanze',
     'beds' => 'Posti Letto',
     'bathrooms' => 'Bagni',
-    'nearby' => 'Nelle Vicinanze',
+    'nearby' => 'Cosa fare nelle vicinanze',
     'show_price' => 'Scopri le disponibilità',
     'select_dates' => 'Vai alla selezione delle date',
 

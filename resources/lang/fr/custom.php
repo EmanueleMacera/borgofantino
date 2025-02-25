@@ -108,12 +108,12 @@ return [
     'spa_booking_notice' => 'Tous les services indiqués sont utilisables exclusivement sur réservation',
 
     /* Alloggi */
-    'info' => 'Info',
+    'info' => 'Informations générales',
     'services' => 'Services',
     'rooms' => 'Chambres',
     'beds' => 'Lits',
     'bathrooms' => 'Bains',
-    'nearby' => 'À proximité',
+    'nearby' => 'Que faire dans les environs?',
     'show_price' => 'Découvrez les disponibilités',
     'select_dates' => 'Aller à la sélection de la date',
 

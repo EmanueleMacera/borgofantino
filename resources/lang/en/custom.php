@@ -108,12 +108,12 @@ return [
     'spa_booking_notice' => 'All indicated services can be used exclusively by reservation',
     
     /* Alloggi */
-    'info' => 'Info',
+    'info' => 'General Info',
     'services' => 'Services',
     'rooms' => 'Rooms',
     'beds' => 'Beds',
     'bathrooms' => 'Bathrooms',
-    'nearby' => 'Nearby',
+    'nearby' => 'What to do nearby',
     'show_price' => 'Discover availability',
     'select_dates' => 'Go to date selection',
 
