@@ -113,7 +113,7 @@
                     <ul class="info-list">
                         <li><i class="fa-solid fa-people-roof"></i>{{ __('custom.rooms') }}: {{ $item->camere }}</li>
                         <li><i class="fa-solid fa-bath"></i>{{ __('custom.bathrooms') }}: {{ $item->bagni }}</li>
-                        <li><i class="fa-solid fa-bed"></i>{{ __('custom.beds') }}: {{ $item->posti_letto }}</li>
+                        <li><i class="fa-solid fa-bed"></i>{{ __('custom.alloggio_capacity') }}: {{ $item->posti_letto }}</li>
                     </ul>
                 </div>
             @endif
