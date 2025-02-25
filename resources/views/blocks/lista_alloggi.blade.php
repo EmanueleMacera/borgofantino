@@ -1,9 +1,5 @@
 <div class="block-parallax-alloggi"></div>
 <div class="container mb-4 mt-4">
-    <div class="text-center mb-4">
-        <h1 class="mb-2">{{ __('custom.alloggi_title') }}</h1>
-        <p>{{ __('custom.alloggi_description') }}</p>
-    </div>
     <div class="cards-container">
         @foreach ($items as $item)
             <div class="card-2">

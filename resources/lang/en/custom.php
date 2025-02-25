@@ -145,4 +145,17 @@ return [
      * Contact
      ***********************************************/
     'contact_title' => 'Contact Us',
+    'contact_title_2' => 'Contact Us for More Information',
+    'contact_intro' => 'For information and bookings, please fill out the form below or contact us directly using the provided details.',
+    'contact_name' => 'Enter Your Name',
+    'contact_email' => 'Enter Your Email',
+    'contact_phone' => 'Enter Your Phone Number',
+    'phone' => 'Phone',
+    'contact_message' => 'Message',
+    'submit' => 'Submit',
+    'servizi' => '  <address>
+                    Fill out the form or call us for any information or request.<br>
+                    <strong>Phone:</strong> +39 019 8387211
+                    </address>',
+    'privacy_policy' => 'I have read and accept the <a href="https://www.borgofantino.it/privacy" style="color: var(--tertiary-color)!important">Privacy Policy</a>',
 ];

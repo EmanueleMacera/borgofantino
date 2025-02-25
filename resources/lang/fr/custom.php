@@ -144,4 +144,18 @@ return [
     /************************************************
      * Contact
      ***********************************************/
+    'contact_title' => 'Contactez-nous',
+    'contact_title_2' => 'Contactez-nous pour plus d\'informations',
+    'contact_intro' => 'Pour toute information et réservation, veuillez remplir le formulaire ci-dessous ou nous contacter directement aux coordonnées indiquées.',
+    'contact_name' => 'Entrez votre nom',
+    'contact_email' => 'Entrez votre e-mail',
+    'contact_phone' => 'Entrez votre numéro de téléphone',
+    'phone' => 'Téléphone',
+    'contact_message' => 'Message',
+    'submit' => 'Envoyer',
+    'servizi' => '  <address>
+                    Remplissez le formulaire ou appelez-nous pour toute information ou demande.<br>
+                    <strong>Téléphone:</strong> +39 019 8387211
+                    </address>',
+    'privacy_policy' => 'J\'ai lu et j\'accepte la <a href="https://www.borgofantino.it/privacy" style="color: var(--tertiary-color)!important">Politique de confidentialité</a>',
 ];
