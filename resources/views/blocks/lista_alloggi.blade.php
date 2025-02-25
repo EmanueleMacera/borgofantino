@@ -1,26 +1,30 @@
-<section class="container mx-auto px-4 py-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+{{-- views/components/accommodation-cards.blade.php --}}
+<section class="accommodation-cards">
+    <div class="cards-container">
         @foreach ($items as $item)
-            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="{{ asset('storage/thumbnails/' . $item->slug . '.WebP') }}" alt="{{ $item->name }}" class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h2 class="text-xl font-semibold text-gray-800 mb-2">{{ $item->name }}</h2>
-                    <p class="text-gray-600 mb-4">{{ Str::limit($item->description, 100) }}</p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">{{ $item->camere }} camere</span>
-                        <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">{{ $item->bagni }} bagni</span>
-                        <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">{{ $item->posti_letto }} posti letto</span>
+            <div class="card-2">
+                <div class="card-image">
+                    @php
+                        $thumbnail = $item->itemMedia?->firstWhere('type', 'thumbnail');
+                        $thumbnailPath = asset('storage/' . $thumbnail->path);
+                    @endphp
+                    <img src="{{ $thumbnailPath }}" alt="{{ $item->name }}">
+                    <span class="card-badge"><i class="fa-solid fa-bed"></i>{{ $item->posti_letto }} {{ __('custom.alloggio_capacity') }}</span>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">{{ $item->name }}</h2>
+                    <div class="card-features">
+                        <span class="feature"><i class="fa-solid fa-people-roof"></i>{{ __('custom.rooms') }}: {{ $item->camere }}</span>
+                        <span class="feature"><i class="fa-solid fa-bath"></i>{{ __('custom.bathrooms') }}: {{ $item->bagni }}</span>
                     </div>
-                    <div class="mb-4">
-                        @foreach($item->attributes as $attribute)
-                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ $attribute->name }}</span>
+                    <div class="card-attributes">
+                        @foreach($item->attributes->take(3) as $attribute)
+                            <span class="attribute">{{ $attribute->name }}</span>
                         @endforeach
                     </div>
-                    <div class="flex justify-between items-center">
-                        <span class="text-sm text-gray-600">{{ $item->adress }}</span>
-                        <a href="{{ route('public.item.show', ['name' => $item->slug]) }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300">
-                            Dettagli
-                        </a>
+                    <div class="card-footer">
+                        <span class="card-address">{{ $item->adress }}</span>
+                        <a href="{{ route('public.item.show', ['name' => $item->slug]) }}" class="btn btn-primary"><i class="fas fa-info-circle"></i>{{ __('custom.alloggio_details') }}</a>
                     </div>
                 </div>
             </div>

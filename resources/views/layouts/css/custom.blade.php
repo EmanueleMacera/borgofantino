@@ -136,17 +136,29 @@ font-size:1.2rem!important;
 .alloggi-slider-container {
     position: relative;
     overflow: hidden;
+    padding: 10px;
 }
 
 .alloggi-slider {
     display: flex;
     transition: transform 0.3s ease;
+    gap: 0.5rem;
 }
 
 .alloggi-slide {
     flex: 0 0 33.333%;
-    max-width: 33.333%;
-    padding: 0 15px;
+    max-width: 32.5%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alloggi-slide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
 }
 
 .alloggi-slider-controls {
@@ -603,7 +615,119 @@ font-size:1.2rem!important;
     background-color: var(--btn-hover-bg-color:);
 }
 
+{{-- ========================= --}}
+{{-- 15. Lista alloggi         --}}
+{{-- ========================= --}}
+.accommodation-cards {
+    padding: 2rem;
+}
 
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-2 {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-2:hover .card-image img {
+    transform: scale(1.05);
+}
+
+.card-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.card-description {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.card-features {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.feature {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.card-attributes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.attribute {
+    background-color: #f1f3f5;
+    color: #495057;
+    padding: 3px 8px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-address {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
 {{-- ========================= --}}
 {{-- 20. Media Queries         --}}
 {{-- ========================= --}}
@@ -706,5 +830,10 @@ font-size:1.2rem!important;
 
     .reach-us-container {
         translate: 0 -50px;
+    }
+
+    {{-- Lista alloggi --}}
+    .cards-container {
+        grid-template-columns: 1fr;
     }
 }
