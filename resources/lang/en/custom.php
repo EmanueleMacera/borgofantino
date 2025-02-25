@@ -12,7 +12,7 @@ return [
     /* Alloggi */
     'alloggi_title' => 'Rental Accommodation',
     'alloggi_description' => 'Choose your ideal space',
-    'alloggi_button1' => 'Accommodations',
+    'alloggi_button1' => 'All Accommodations',
     'alloggi_button2' => 'Contact us',
     'alloggio_name' => 'Accommodation Name',
     'alloggio_capacity' => 'Sleeping Capacity',

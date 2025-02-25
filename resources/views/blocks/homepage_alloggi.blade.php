@@ -17,24 +17,23 @@
                 <div class="alloggi-slider" id="alloggi-slider">
                     @foreach ($items as $item)
                         <div class="alloggi-slide">
-                            <div class="card h-100 shadow">
+                            <div class="card-image">
                                 @php
                                     $thumbnail = $item->itemMedia?->firstWhere('type', 'thumbnail');
                                     $thumbnailPath = asset('storage/' . $thumbnail->path);
                                 @endphp
-                                @if ($item->thumbnail)
-                                    <img src="{{ $thumbnailPath }}" class="card-img-top rounded-top" alt="{{ $item->name }}">
-                                @endif
-                                <div style="padding-top: 1rem; padding-left: 1rem;">
-                                    <h3 class="card-title text-bold" id="name">{{ $item->name }}</h3>
+                                <img src="{{ $thumbnailPath }}" alt="{{ $item->name }}">
+                                <span class="card-badge"><i class="fa-solid fa-bed"></i>{{ $item->posti_letto }} {{ __('custom.alloggio_capacity') }}</span>
+                            </div>
+                            <div class="card-content">
+                                <h2 class="card-title">{{ $item->name }}</h2>
+                                <div class="card-features">
+                                    <span class="feature"><i class="fa-solid fa-people-roof"></i>{{ __('custom.rooms') }}: {{ $item->camere }}</span>
+                                    <span class="feature"><i class="fa-solid fa-bath"></i>{{ __('custom.bathrooms') }}: {{ $item->bagni }}</span>
                                 </div>
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item" id="item-capacity"><i class="fa-solid fa-people-roof"></i>{{ __('custom.rooms') }}: {{ $item->camere }}</li>
-                                    <li class="list-group-item" id="item-capacity"><i class="fa-solid fa-bed"></i>{{ __('custom.alloggio_capacity') }}: {{ $item->posti_letto }}</li>
-                                    <li class="list-group-item" id="item-capacity"><i class="fa-solid fa-bath"></i>{{ __('custom.bathrooms') }}: {{ $item->bagni }}</li>
-                                </ul>
-                                <div class="card-footer" style="text-align: center">
-                                    <a href="{{ route('public.item.show', ['name' => $item->slug]) }}" class="btn btn-sm w-100 btn-primary" id="item-link"><i class="fas fa-info-circle"></i>{{ __('custom.alloggio_details') }}</a>
+                                <div class="card-footer">
+                                    <span class="card-address">{{ $item->adress }}</span>
+                                    <a href="{{ route('public.item.show', ['name' => $item->slug]) }}" class="btn btn-primary"><i class="fas fa-info-circle"></i>{{ __('custom.alloggio_details') }}</a>
                                 </div>
                             </div>
                         </div>
