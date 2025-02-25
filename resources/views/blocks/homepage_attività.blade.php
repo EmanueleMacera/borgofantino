@@ -281,7 +281,7 @@
                         <div class="activity-features">
                             <span><i class="fas fa-child"></i>{{ __('custom.family_summer_features.0') }}</span>
                             <span><i class="fas fa-swimming-pool"></i>{{ __('custom.family_summer_features.1') }}</span>
-                            <span><i class="fas fa-tennis-ball"></i>{{ __('custom.family_summer_features.2') }}</span>
+                            <span><i class="fas fa-football"></i>{{ __('custom.family_summer_features.2') }}</span>
                         </div>
                     </div>
                 </div>
