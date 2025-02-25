@@ -144,6 +144,7 @@ return [
     'contact_us' => 'Contactez-nous',
     'phone' => 'Téléphone',
     'vat' => 'TVA',
+    'cin' => 'CIN',
     'address' => 'Adresse',
     'resources' => 'Ressources',
     'about_us' => 'À Propos',

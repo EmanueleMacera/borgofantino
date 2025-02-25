@@ -33,6 +33,9 @@
                     @if(!empty($style->footer_vat))
                         <li><strong>{{ __('general.vat') }}:</strong> {{ $style->footer_vat }}</li>
                     @endif
+                    @if(!empty($style->footer_cin))
+                        <li><strong>{{ __('general.vat') }}:</strong> {{ $style->footer_cin }}</li>
+                    @endif
                     @if(!empty($style->footer_address))
                         <li><strong>{{ __('general.address') }}:</strong> {{ $style->footer_address }}</li>
                     @endif
