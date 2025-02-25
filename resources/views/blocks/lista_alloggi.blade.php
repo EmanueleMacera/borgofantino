@@ -18,7 +18,7 @@
                     </div>
                     <div class="flex justify-between items-center">
                         <span class="text-sm text-gray-600">{{ $item->adress }}</span>
-                        <a href="{{ route('alloggi.show', $item->slug) }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300">
+                        <a href="{{ route('public.item.show', ['name' => $item->slug]) }}" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition duration-300">
                             Dettagli
                         </a>
                     </div>
