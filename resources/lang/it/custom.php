@@ -116,6 +116,9 @@ return [
     'nearby' => 'Cosa fare nelle vicinanze',
     'show_price' => 'Scopri le disponibilità',
     'select_dates' => 'Vai alla selezione delle date',
+    'map_position' => 'Posizione sulla Mappa',
+    'find_maps' => 'Guarda su Google Maps',
+    'go_maps' => 'Vai su Maps',
 
     /************************************************
      * Privacy Policy
@@ -138,4 +141,7 @@ return [
     'privacy_rights' => 'Al titolare del trattamento Lei potrà rivolgersi per far valere i Suoi diritti di rettificazione, cancellazione, opposizione a particolari trattamenti dei propri dati, esplicitati all\'art. 7 del D.Lgs 196/03.',
     'privacy_mandatory' => 'Il conferimento dei Suoi dati personali, comuni e sensibili, è obbligatorio per la fornitura della prestazione. Il loro eventuale mancato conferimento comporta l\'impossibilità per lo Studio di poter prestare il servizio di consulenza e assistenza legale.',
 
+    /************************************************
+     * Contact
+     ***********************************************/
 ];

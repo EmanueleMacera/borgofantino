@@ -116,6 +116,9 @@ return [
     'nearby' => 'Que faire dans les environs?',
     'show_price' => 'Découvrez les disponibilités',
     'select_dates' => 'Aller à la sélection de la date',
+    'map_position' => 'Position sur la carte',
+    'find_maps' => 'Trouvez-nous sur Maps',
+    'go_maps' => 'Aller sur Maps',
 
     /************************************************
      * Privacy Policy
@@ -138,4 +141,7 @@ return [
     'privacy_rights' => 'Vous pouvez vous adresser au responsable du traitement pour faire valoir vos droits de rectification, d\'effacement, d\'opposition à certains traitements de vos données, explicités à l\'art. 7 du décret législatif 196/03.',
     'privacy_mandatory' => 'La fourniture de vos données personnelles, communes et sensibles, est obligatoire pour la prestation du service. Leur non-fourniture éventuel entraîne l\'impossibilité pour le Cabinet de fournir le service de conseil et d\'assistance juridique.',
 
+    /************************************************
+     * Contact
+     ***********************************************/
 ];

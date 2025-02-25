@@ -143,15 +143,15 @@
                 </section>
             @endif
 
-            <div class="row mb-5">
+            <div class="row container mb-4 mt-4">
                 <div class="col-lg-7">
-                    <h3 style="margin-bottom: 15px;">{{ __('custom.map_position') }}</h3>
+                    <h3 style="margin-bottom: 15px">{{ __('custom.map_position') }}</h3>
                     <div id="map" style="width: 100%; height: 450px;"></div>
                 </div>
                 <div class="col-lg-1">
                 </div>
                 <div class="col-lg-4">
-                    <h3 style="margin-top: 15px; margin-bottom: 15px;">{{ __('custom.find_maps') }}</h3>
+                    <h3 style="margin-bottom: 15px">{{ __('custom.find_maps') }}</h3>
                     <a href="https://www.google.com/maps?q={{ $item->latitude }},{{ $item->longitude }}" target="_blank" class="btn btn-danger w-100">{{ __('custom.go_maps') }}</a>
                 </div>
             </div>

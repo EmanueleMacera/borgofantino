@@ -116,6 +116,9 @@ return [
     'nearby' => 'What to do nearby',
     'show_price' => 'Discover availability',
     'select_dates' => 'Go to date selection',
+    'map_position' => 'Map Position',
+    'find_maps' => 'Find us on Maps',
+    'go_maps' => 'Go to Maps',
 
     /************************************************
      * Privacy Policy
@@ -138,5 +141,8 @@ return [
     'privacy_rights' => 'You may contact the data controller to assert your rights of rectification, cancellation, opposition to particular processing of your data, as explained in art. 7 of Legislative Decree 196/03.',
     'privacy_mandatory' => 'The provision of your personal data, both common and sensitive, is mandatory for the provision of the service. Any failure to provide them makes it impossible for the Firm to provide the legal advice and assistance service.',
 
-
+    /************************************************
+     * Contact
+     ***********************************************/
+    'contact_title' => 'Contact Us',
 ];
