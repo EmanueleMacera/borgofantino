@@ -142,9 +142,20 @@
                     <p class="section-text">{!! $item->nei_dintorni !!}</p>
                 </section>
             @endif
-            <section class="content-section">
-                <div id="map" style="height: 300px;"></div>
-            </section>
+
+            <div class="row mb-5">
+                <div class="col-lg-7">
+                    <h3 style="margin-bottom: 15px;">{{ __('custom.map_position') }}</h3>
+                    <div id="map" style="width: 100%; height: 450px;"></div>
+                </div>
+                <div class="col-lg-1">
+                </div>
+                <div class="col-lg-4">
+                    <h3 style="margin-top: 15px; margin-bottom: 15px;">{{ __('custom.find_maps') }}</h3>
+                    <a href="https://www.google.com/maps?q={{ $item->latitude }},{{ $item->longitude }}" target="_blank" class="btn btn-danger w-100">{{ __('custom.go_maps') }}</a>
+                </div>
+            </div>
+
         </div>
         <div class="col-lg-3">
             @if (!empty($item->attributes))
@@ -190,14 +201,25 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var map = L.map('map').setView([{{ $item->latitude }}, {{ $item->longitude }}], 13);
+            
+            var map;
 
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            if (map !== undefined) {
+                map.remove();
+            }
+        
+            map = L.map('map').setView([{{ $item->latitude }}, {{ $item->longitude }}], 15);
+        
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
             }).addTo(map);
-
-            var marker = L.marker([{{ $item->latitude }}, {{ $item->longitude }}]).addTo(map);
+        
+            setTimeout(function() {
+                map.invalidateSize();
+            }, 500);
+        
+            L.marker([{{ $item->latitude }}, {{ $item->longitude }}]).addTo(map)
+                .bindPopup('<b>{{ $item->name }}</b>').openPopup();
         });
     </script>
 @endpush
