@@ -117,4 +117,26 @@ return [
     'show_price' => 'Discover availability',
     'select_dates' => 'Go to date selection',
 
+    /************************************************
+     * Privacy Policy
+     ***********************************************/
+    'privacy_title' => 'Privacy Policy pursuant to art. 13 of Legislative Decree 196/03',
+    'privacy_greeting' => 'Dear Customer,',
+    'privacy_intro' => 'Legislative Decree 196/03 on the "protection of personal data processing" has come into force. Pursuant to art. 13 of said Legislative Decree, the undersigned Pampirio Carlo, as legal representative of Treehouse Italia Srl, VAT 01581160098, wishes to provide you with certain information regarding the use of your personal data.',
+    'privacy_data_collected' => 'Your personal data collected directly from you concern:',
+    'privacy_data_common' => 'common personal data, possibly knowable by anyone (e.g. general information);',
+    'privacy_data_usage' => 'Your personal data, both common and sensitive, will be processed within the normal activity of the Office, according to the following purposes:',
+    'privacy_purpose_1' => 'purposes strictly connected and instrumental to the management of customer relationships (e.g. the collection of your general information);',
+    'privacy_purpose_2' => 'purposes related to the management of the client\'s real estate assets.',
+    'privacy_processing' => 'The processing of your personal data will take place through manual and computerized tools with methods strictly related to the purposes themselves and, in any case, in such a way as to guarantee the security and confidentiality of the data according to Legislative Decree 196/03.',
+    'privacy_sharing' => 'In carrying out its activity and for the pursuit of the aforementioned purposes, the Office may communicate your data to:',
+    'privacy_share_1' => 'Real estate agencies,',
+    'privacy_share_2' => 'IT portals,',
+    'privacy_share_3' => 'Professionals, Consultants and Structures appointed for the fulfillment of management, advertising and administrative obligations.',
+    'privacy_share_note' => 'In any case, your personal data may be processed, without prior consent, in the cases provided for by art. 26 of Legislative Decree 196/03.',
+    'privacy_controller' => 'The data controller is Treehouse Italia Srl., VAT 01581160098.',
+    'privacy_rights' => 'You may contact the data controller to assert your rights of rectification, cancellation, opposition to particular processing of your data, as explained in art. 7 of Legislative Decree 196/03.',
+    'privacy_mandatory' => 'The provision of your personal data, both common and sensitive, is mandatory for the provision of the service. Any failure to provide them makes it impossible for the Firm to provide the legal advice and assistance service.',
+
+
 ];

@@ -117,4 +117,25 @@ return [
     'show_price' => 'Scopri le disponibilità',
     'select_dates' => 'Vai alla selezione delle date',
 
+    /************************************************
+     * Privacy Policy
+     ***********************************************/
+    'privacy_title' => 'Informativa Privacy ai sensi dell\'art. 13 del D. Lgs. 196/03',
+    'privacy_greeting' => 'Spett.le Cliente,',
+    'privacy_intro' => 'è entrato in vigore il D. Lgs 196/03 sulla "tutela del trattamento dei dati personali". Ai sensi dell\'art. 13 di detto D. Lgs, il sottoscritto Pampirio Carlo in qualità di legale rappresentante della società Treehouse Italia Srl, P. IVA 01581160098, desidera fornirLe talune informazioni, riguardanti l\'utilizzo dei dati personali che la riguardano.',
+    'privacy_data_collected' => 'I Suoi dati personali raccolti direttamente presso di Lei, riguardano:',
+    'privacy_data_common' => 'dati personali comuni, eventualmente conoscibili da chiunque (es. generalità);',
+    'privacy_data_usage' => 'I Suoi dati personali, comuni e sensibili, saranno trattati nell\'ambito della normale attività dell\'Ufficio, secondo le seguenti finalità:',
+    'privacy_purpose_1' => 'finalità strettamente connesse e strumentali alla gestione dei rapporti con i clienti (ad es. la raccolta delle sue generalità);',
+    'privacy_purpose_2' => 'finalità connesse alla gestione del patrimonio immobiliare del cliente.',
+    'privacy_processing' => 'Il trattamento dei Suoi dati personali avverrà mediante strumenti manuali, informatici con modalità strettamente correlate alle finalità stesse e, comunque, in modo da garantire la sicurezza e la riservatezza dei dati stessi secondo il D. Lgs 196/03.',
+    'privacy_sharing' => 'Nello svolgimento della propria attività e per il perseguimento delle finalità di cui sopra, l\'Ufficio potrebbe comunicare i Suoi dati a:',
+    'privacy_share_1' => 'Agenzie di mediazione immobiliare,',
+    'privacy_share_2' => 'Portali informatici,',
+    'privacy_share_3' => 'Professionisti, Consulenti e Strutture incaricate per gli adempimenti degli obblighi gestionali, pubblicitari ed amministrativi.',
+    'privacy_share_note' => 'In ogni caso, i Suoi dati personali potranno essere trattati, senza previo consenso, nei casi previsti dall\'art. 26 del D. Lgs 196/03.',
+    'privacy_controller' => 'Titolare del trattamento è la società Treehouse Italia Srl., P. IVA 01581160098.',
+    'privacy_rights' => 'Al titolare del trattamento Lei potrà rivolgersi per far valere i Suoi diritti di rettificazione, cancellazione, opposizione a particolari trattamenti dei propri dati, esplicitati all\'art. 7 del D.Lgs 196/03.',
+    'privacy_mandatory' => 'Il conferimento dei Suoi dati personali, comuni e sensibili, è obbligatorio per la fornitura della prestazione. Il loro eventuale mancato conferimento comporta l\'impossibilità per lo Studio di poter prestare il servizio di consulenza e assistenza legale.',
+
 ];

@@ -117,4 +117,25 @@ return [
     'show_price' => 'Découvrez les disponibilités',
     'select_dates' => 'Aller à la sélection de la date',
 
+    /************************************************
+     * Privacy Policy
+     ***********************************************/
+    'privacy_title' => 'Politique de confidentialité conformément à l\'art. 13 du décret législatif 196/03',
+    'privacy_greeting' => 'Cher Client,',
+    'privacy_intro' => 'Le décret législatif 196/03 sur la "protection du traitement des données personnelles" est entré en vigueur. Conformément à l\'art. 13 dudit décret, le soussigné Pampirio Carlo, en qualité de représentant légal de la société Treehouse Italia Srl, TVA 01581160098, souhaite vous fournir certaines informations concernant l\'utilisation de vos données personnelles.',
+    'privacy_data_collected' => 'Vos données personnelles collectées directement auprès de vous concernent :',
+    'privacy_data_common' => 'données personnelles communes, éventuellement connaissables par quiconque (ex. informations générales);',
+    'privacy_data_usage' => 'Vos données personnelles, communes et sensibles, seront traitées dans le cadre de l\'activité normale du Bureau, selon les finalités suivantes :',
+    'privacy_purpose_1' => 'finalités strictement liées et instrumentales à la gestion des relations avec les clients (par exemple, la collecte de vos informations générales);',
+    'privacy_purpose_2' => 'finalités liées à la gestion du patrimoine immobilier du client.',
+    'privacy_processing' => 'Le traitement de vos données personnelles se fera au moyen d\'outils manuels et informatiques, selon des modalités strictement liées aux finalités elles-mêmes et, en tout état de cause, de manière à garantir la sécurité et la confidentialité des données conformément au décret législatif 196/03.',
+    'privacy_sharing' => 'Dans le cadre de son activité et pour la poursuite des finalités susmentionnées, le Bureau pourrait communiquer vos données à :',
+    'privacy_share_1' => 'Agences de médiation immobilière,',
+    'privacy_share_2' => 'Portails informatiques,',
+    'privacy_share_3' => 'Professionnels, Consultants et Structures chargés des obligations de gestion, de publicité et d\'administration.',
+    'privacy_share_note' => 'Dans tous les cas, vos données personnelles pourront être traitées, sans consentement préalable, dans les cas prévus par l\'art. 26 du décret législatif 196/03.',
+    'privacy_controller' => 'Le responsable du traitement est la société Treehouse Italia Srl., TVA 01581160098.',
+    'privacy_rights' => 'Vous pouvez vous adresser au responsable du traitement pour faire valoir vos droits de rectification, d\'effacement, d\'opposition à certains traitements de vos données, explicités à l\'art. 7 du décret législatif 196/03.',
+    'privacy_mandatory' => 'La fourniture de vos données personnelles, communes et sensibles, est obligatoire pour la prestation du service. Leur non-fourniture éventuel entraîne l\'impossibilité pour le Cabinet de fournir le service de conseil et d\'assistance juridique.',
+
 ];
