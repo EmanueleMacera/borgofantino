@@ -1,5 +1,5 @@
 {{-- Intro --}}
-<div class="block-parallax-servizi"></div>
+<div class="block-parallax-contatti"></div>
 <div class="row" style="margin: 0;">
     <div class="col-12 col-md-7">
         <div class="servizi-text">

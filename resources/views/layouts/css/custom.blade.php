@@ -718,6 +718,99 @@ font-size:1.2rem!important;
     font-size: 0.8rem;
     color: #6c757d;
 }
+
+{{-- ========================= --}}
+{{-- 5. Form Contatti         --}}
+{{-- ========================= --}}
+.block-parallax-contatti {
+    background-image: url("{{ asset('assets/custom/contatti/parallax.WebP') }}");
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 50vh;
+  }
+
+  .servizi-form {
+    translate: 0 -80px;
+    max-width: 600px;
+    margin-right: 3.5vh;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+.servizi-form form{
+    width: 100%;
+}
+
+.servizi-form h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.servizi-form h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.servizi-form .form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--tertiary-color);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.servizi-form .form-group label i {
+    margin-right: 10px;
+    color: var(--tertiary-color);
+}
+
+.servizi-form .form-group textarea {
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    transition: border-color 0.3s, box-shadow 0.3s ease-in-out;
+    background-color: #f8f9fa;
+    margin-bottom: 20px;
+}
+
+.servizi-form .form-group input:focus,
+.servizi-form .form-group textarea:focus {
+    border-color: var(--tertiary-color);
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.servizi-form button {
+    background-color: var(--tertiary-color);
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.servizi-form button:hover {
+    background-color: var(--tertiary-color);
+    transform: translateY(-2px);
+}
+
+.servizi-form div[style="display:none;"] {
+    display: none;
+}
+
 {{-- ========================= --}}
 {{-- 20. Media Queries         --}}
 {{-- ========================= --}}
@@ -825,5 +918,13 @@ font-size:1.2rem!important;
     {{-- Lista alloggi --}}
     .cards-container {
         grid-template-columns: 1fr;
+    }
+
+    {{-- Form Contatti --}}
+    .servizi-form {
+        translate: 0;
+        margin-right: 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
     }
 }
