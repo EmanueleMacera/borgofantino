@@ -102,12 +102,6 @@ html {
 }
 
 {{-- Alloggi --}}
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
-}
-
 .alloggi-container {
     margin-bottom:50px;
     will-change: transform;
@@ -618,10 +612,6 @@ font-size:1.2rem!important;
 {{-- ========================= --}}
 {{-- 15. Lista alloggi         --}}
 {{-- ========================= --}}
-.accommodation-cards {
-    padding: 2rem;
-}
-
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

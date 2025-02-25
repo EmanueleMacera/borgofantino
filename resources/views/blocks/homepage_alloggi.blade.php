@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <span class="card-address">{{ $item->adress }}</span>
-                                    <a href="{{ route('public.item.show', ['name' => $item->slug]) }}" class="btn btn-primary"><i class="fas fa-info-circle"></i>{{ __('custom.alloggio_details') }}</a>
+                                    <a href="{{ route('public.item.show', ['name' => $item->slug]) }}" class="btn btn-primary">{{ __('custom.alloggio_details') }}</a>
                                 </div>
                             </div>
                         </div>

@@ -1,5 +1,8 @@
-{{-- views/components/accommodation-cards.blade.php --}}
-<section class="accommodation-cards">
+<div class="container mb-4">
+    <div class="text-center mb-4">
+        <h1 class="mb-2">{{ __('custom.alloggi_title') }}</h1>
+        <p>{{ __('custom.alloggi_description') }}</p>
+    </div>
     <div class="cards-container">
         @foreach ($items as $item)
             <div class="card-2">
@@ -18,16 +21,16 @@
                         <span class="feature"><i class="fa-solid fa-bath"></i>{{ __('custom.bathrooms') }}: {{ $item->bagni }}</span>
                     </div>
                     <div class="card-attributes">
-                        @foreach($item->attributes->take(3) as $attribute)
-                            <span class="attribute">{{ $attribute->name }}</span>
+                        @foreach($item->attributes as $attribute)
+                            <span class="attribute"><i class="{{ $attribute->icon }}"></i>{{ $attribute->name }}</span>
                         @endforeach
                     </div>
                     <div class="card-footer">
                         <span class="card-address">{{ $item->adress }}</span>
-                        <a href="{{ route('public.item.show', ['name' => $item->slug]) }}" class="btn btn-primary"><i class="fas fa-info-circle"></i>{{ __('custom.alloggio_details') }}</a>
+                        <a href="{{ route('public.item.show', ['name' => $item->slug]) }}" class="btn btn-primary" target="_blank">{{ __('custom.alloggio_details') }}</a>
                     </div>
                 </div>
             </div>
         @endforeach
     </div>
-</section>
+</div>

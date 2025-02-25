@@ -65,7 +65,7 @@ class Item extends Model
      */
     public function attributes()
     {
-        return $this->belongsToMany(Attribute::class, 'item_attributes', 'item_id', 'attribute_id');
+        return $this->belongsToMany(Attribute::class, 'item_attributes', 'item_id', 'attribute_id')->orderBy('name');
     }
 
     /**

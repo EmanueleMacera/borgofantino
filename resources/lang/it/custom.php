@@ -12,7 +12,7 @@ return [
     /* Alloggi */
     'alloggi_title' => 'Alloggi in Affitto',
     'alloggi_description' => 'Scegli il tuo spazio ideale',
-    'alloggi_button1' => 'Tutti gli Alloggi',
+    'alloggi_button1' => 'Tutti gli alloggi',
     'alloggi_button2' => 'Contattaci',
     'alloggio_name' => 'Nome Alloggio',
     'alloggio_capacity' => 'Posti Letto',
