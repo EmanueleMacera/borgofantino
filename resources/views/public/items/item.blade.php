@@ -160,7 +160,7 @@
                     @foreach ($item->attributes as $attributo)
                         <div class="service-item">
                             <i class="{{ $attributo->icon }}" aria-hidden="true"></i>
-                            <span>{{ $attributo->name }}</span>
+                            <span>{{ $attributo->getTranslation('name', app()->getLocale()) }}</span>
                         </div>
                     @endforeach
                 </div>

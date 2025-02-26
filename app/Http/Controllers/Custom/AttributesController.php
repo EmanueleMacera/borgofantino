@@ -108,14 +108,29 @@ class AttributesController extends Controller
     public function store(Request $request)
     {
         $data = $this->validateAttribute($request);
-
-        Attribute::create($data);
+    
+        // Gestione delle traduzioni per il campo 'name' (multilingua)
+        if (isset($data['name'])) {
+            foreach ($data['name'] as $lang => $name) {
+                $data['name'][$lang] = $name; // Impostiamo la traduzione per ogni lingua
+            }
+        }
+    
+        $attribute = Attribute::create($data);
+    
+        // Se si utilizzano le traduzioni
+        if (isset($data['name'])) {
+            foreach ($data['name'] as $lang => $desc) {
+                $attribute->setTranslation('name', $lang, $desc);
+            }
+        }
+    
         $message = __('general.created_successfully');
-
+    
         return redirect()->route(self::GENERIC_SECTION_NAME . self::INDEX_ROUTE)
                          ->with('success', $message);
     }
-
+    
     /**
      * Update an existing attribute in the database.
      *
@@ -126,10 +141,17 @@ class AttributesController extends Controller
     public function update(Request $request, Attribute $attribute)
     {
         $data = $this->validateAttribute($request);
-
+    
+        // Gestione delle traduzioni per il campo 'name' (multilingua)
+        if (isset($data['name'])) {
+            foreach ($data['name'] as $lang => $desc) {
+                $attribute->setTranslation('name', $lang, $desc);
+            }
+        }
+    
         $attribute->update($data);
         $message = __('general.updated_successfully');
-
+    
         return redirect()->route(self::GENERIC_SECTION_NAME . self::INDEX_ROUTE)
                          ->with('success', $message);
     }
@@ -176,7 +198,7 @@ class AttributesController extends Controller
     private function validateAttribute(Request $request): array
     {
         return $request->validate([
-            'name'                  => 'required|string|max:255',
+            'name'                  => 'required|array',
             'icon'                  => 'nullable|string|max:255',
             'attribute_category_id' => 'required|exists:attribute_categories,id',
         ]);

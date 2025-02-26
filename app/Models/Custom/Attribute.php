@@ -3,6 +3,7 @@
 namespace App\Models\Custom;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 
 class Attribute extends Model
 {
@@ -19,6 +20,11 @@ class Attribute extends Model
      * @var array
      */
     protected $fillable = ['name', 'icon', 'attribute_category_id'];
+
+    use HasTranslations;
+
+    // Aggiungi il campo name all'array delle traduzioni
+    public $translatable = ['name'];
 
     /**
      * Define a relationship with the AttributeCategory model.

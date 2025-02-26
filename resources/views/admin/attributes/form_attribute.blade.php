@@ -24,23 +24,26 @@
                     @method('PUT')
                 @endif
 
-                <!-- Attribute Name -->
+                <!-- Attribute Name with Localization -->
                 <div class="form-group mb-3">
                     <label for="name">
                         <i class="fas fa-tag"></i>{{ __('general.name') }}
                     </label>
-                    <div class="input-group">
-                        <input type="text"
-                               id="name"
-                               name="name"
-                               class="form-control"
-                               value="{{ old('name', $attribute->name ?? '') }}"
-                               placeholder="{{ __('general.enter_name') }}"
-                               required
-                               autocomplete="off">
-                    </div>
+                    @foreach(config('app.available_locales') as $langCode => $langName)
+                        <div class="input-group mb-2">
+                            <span class="input-group-text">{{ strtoupper($langCode) }}</span>
+                            <input type="text"
+                                   id="name_{{ $langCode }}"
+                                   name="name[{{ $langCode }}]"
+                                   class="form-control"
+                                   value="{{ old("name.$langCode", $attribute->getTranslation('name', $langCode) ?? '') }}"
+                                   placeholder="{{ __('general.enter_name') }} ({{ strtoupper($langCode) }})"
+                                   required
+                                   autocomplete="off">
+                        </div>
+                    @endforeach
                 </div>
-
+                
                 <!-- Icon -->
                 <div class="form-group mb-3">
                     <label for="icon">

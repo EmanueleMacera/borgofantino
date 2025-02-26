@@ -59,7 +59,7 @@
                             <tbody>
                                 @foreach ($macroCategory->attributes as $attribute)
                                     <tr>
-                                        <td>{{ $attribute->name }}</td>
+                                        <td>{{ $attribute->getTranslation('name', app()->getLocale()) }}</td>
                                         <td><i class="{{ $attribute->icon }}"></i></td>
                                         <td>
                                             <a href="{{ route('attributes.form.edit', $attribute) }}" class="btn btn-sm btn-primary me-2">
