@@ -795,10 +795,6 @@ font-size:1.2rem!important;
 {{-- ========================= --}}
 {{-- 10. Galleria              --}}
 {{-- ========================= --}}
-.tz-gallery {
-    padding: 40px;
-}
-
 .tz-gallery .row > div {
     padding: 2px;
 }
