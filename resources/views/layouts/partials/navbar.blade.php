@@ -6,9 +6,11 @@
 
             <!-- Mobile Admin Sidebar Hamburger -->
             @auth
-                <button id="sidebarToggle" class="button-toggle me-2">
-                    <i class="fa fa-bars"></i>
-                </button>
+                @if(request()->is('admin*'))
+                    <button id="sidebarToggle" class="button-toggle me-2">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                @endif
             @endauth
 
             <a class="navbar-brand" href="{{ url('/') }}">
