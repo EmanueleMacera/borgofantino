@@ -2,7 +2,7 @@
 
 @section('title', $categoryType->name)
 
-@section('public-content')
+@section('content')
 <div class="container mt-5">
     <div class="text-center">
         <h1 class="display-5 mb-3">
@@ -28,7 +28,7 @@
         @foreach($items as $alloggio)
             <div class="alloggio-card mb-4 d-flex flex-row" data-localita-id="{{ $alloggio->category_id }}">
                 <a href="{{ route('public.item.show', ['categoryTypeSlug' => $categoryType->slug, 'name' => $alloggio->name]) }}" class="stretched-link">
-                    <span class="sr-only">{{__('custom.show_details')}}{{ $alloggio->name }}</span>
+                    <span class="visually-hidden">{{__('custom.show_details')}}{{ $alloggio->name }}</span>
                 </a>
                 <div class="alloggio-thumbnail-container col-4 p-0">
                     @php

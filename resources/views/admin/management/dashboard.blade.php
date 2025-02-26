@@ -142,59 +142,82 @@ use App\Models\Admin\User;
 
 @push('scripts')
 <script>
-    $(document).ready(function () {
+    document.addEventListener('DOMContentLoaded', function () {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const confirmCreateUserBtn = document.getElementById('confirm-create-user-btn');
+        const createUserForm = document.getElementById('createUserForm');
+        const createEmail = document.getElementById('create-email');
+        const confirmEmail = document.getElementById('confirm-email');
+        const createPassword = document.getElementById('create-password');
+        const confirmPassword = document.getElementById('confirm-password');
+        const createUserError = document.getElementById('create-user-error');
 
-        $('#create-email, #confirm-email').on('input', function () {
-            const email = $('#create-email').val();
-            const confirmEmail = $('#confirm-email').val();
+        // Validate email fields
+        createEmail.addEventListener('input', validateEmail);
+        confirmEmail.addEventListener('input', validateEmail);
 
-            if (!emailRegex.test(email)) {
-                $('#create-user-error').html('{{ __('general.invalid_format') }}').show();
-                $('#confirm-create-user-btn').prop('disabled', true);
-            } else if (email !== confirmEmail) {
-                $('#create-user-error').html('{{ __('general.do_not_match') }}').show();
-                $('#confirm-create-user-btn').prop('disabled', true);
-            } else {
-                $('#create-user-error').hide();
-                $('#confirm-create-user-btn').prop('disabled', false);
-            }
-        });
+        // Validate password fields
+        createPassword.addEventListener('input', validatePassword);
+        confirmPassword.addEventListener('input', validatePassword);
 
-        $('#create-password, #confirm-password').on('input', function () {
-            const password = $('#create-password').val();
-            const confirmPassword = $('#confirm-password').val();
-
-            if (password.length < 8) {
-                $('#create-user-error').html('{{ __('general.password_minimum_length') }}').show();
-                $('#confirm-create-user-btn').prop('disabled', true);
-            } else if (password !== confirmPassword) {
-                $('#create-user-error').html('{{ __('general.do_not_match') }}').show();
-                $('#confirm-create-user-btn').prop('disabled', true);
-            } else {
-                $('#create-user-error').hide();
-                $('#confirm-create-user-btn').prop('disabled', false);
-            }
-        });
-
-        $('#confirm-create-user-btn').click(function () {
-            const form = $('#createUserForm');
-            const actionUrl = form.attr('action');
-            const formData = form.serialize();
-
-            $.post(actionUrl, formData)
-                .done(function () {
+        // Create user button click handler
+        confirmCreateUserBtn.addEventListener('click', function () {
+            const formData = new FormData(createUserForm);
+            fetch(createUserForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                }
+            })
+                .then(response => response.json())
+                .then(response => {
                     location.reload();
                 })
-                .fail(function (xhr) {
+                .catch(xhr => {
                     const errors = xhr.responseJSON.errors;
                     let errorMessages = '';
-                    $.each(errors, function (field, messages) {
-                        errorMessages += messages.join('<br>') + '<br>';
+                    Object.keys(errors).forEach(field => {
+                        errorMessages += errors[field].join('<br>') + '<br>';
                     });
-                    $('#create-user-error').html(errorMessages).show();
+                    createUserError.innerHTML = errorMessages;
+                    createUserError.style.display = 'block';
                 });
         });
+
+        function validateEmail() {
+            const email = createEmail.value;
+            const confirmEmailVal = confirmEmail.value;
+            if (!emailRegex.test(email)) {
+                createUserError.innerHTML = '{{ __('general.invalid_format') }}';
+                createUserError.style.display = 'block';
+                confirmCreateUserBtn.disabled = true;
+            } else if (email !== confirmEmailVal) {
+                createUserError.innerHTML = '{{ __('general.do_not_match') }}';
+                createUserError.style.display = 'block';
+                confirmCreateUserBtn.disabled = true;
+            } else {
+                createUserError.style.display = 'none';
+                confirmCreateUserBtn.disabled = false;
+            }
+        }
+
+        function validatePassword() {
+            const password = createPassword.value;
+            const confirmPasswordVal = confirmPassword.value;
+            if (password.length < 8) {
+                createUserError.innerHTML = '{{ __('general.password_minimum_length') }}';
+                createUserError.style.display = 'block';
+                confirmCreateUserBtn.disabled = true;
+            } else if (password !== confirmPasswordVal) {
+                createUserError.innerHTML = '{{ __('general.do_not_match') }}';
+                createUserError.style.display = 'block';
+                confirmCreateUserBtn.disabled = true;
+            } else {
+                createUserError.style.display = 'none';
+                confirmCreateUserBtn.disabled = false;
+            }
+        }
     });
 </script>
 @endpush

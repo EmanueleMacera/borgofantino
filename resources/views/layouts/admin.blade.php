@@ -2,7 +2,7 @@
 
 @section('title', __('general.admin_dashboard'))
 
-@section('content')
+@section('app-content')
 <div class="admin-container d-flex flex-column flex-md-row">
     @include('layouts.partials.admin-sidebar')
     <main class="flex-grow-1 p-3">

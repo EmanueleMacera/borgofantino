@@ -52,8 +52,8 @@ function renderSidebarItems(array $items, int $level = 0, bool $isRoot = true): 
             $html .= '
               <a class="nav-link"
                  href="#"
-                 data-toggle="collapse"
-                 data-target="#'.$collapseId.'"
+                 data-bs-toggle="collapse"
+                 data-bs-target="#'.$collapseId.'"
                  id="'.$toggleId.'"
               >
                 <i class="fa '.$item['icon'].'"></i>'.$item['title'].'
@@ -90,9 +90,9 @@ function renderSidebarItems(array $items, int $level = 0, bool $isRoot = true): 
 @push('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const toggles = document.querySelectorAll('[data-toggle="collapse"]');
+        const toggles = document.querySelectorAll('[data-bs-toggle="collapse"]');
         toggles.forEach(toggle => {
-            const targetSelector = toggle.getAttribute('data-target');
+            const targetSelector = toggle.getAttribute('data-bs-target');
             const targetElement = document.querySelector(targetSelector);
             if (!targetElement) return;
 

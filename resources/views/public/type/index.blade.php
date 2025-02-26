@@ -2,7 +2,7 @@
 
 @section('title', __('custom.localita_title'))
 
-@section('public-content')
+@section('content')
 <div class="block-parallax-home" style="height: 30vh; width: 100%;"></div>
 <div class="localita-container" style="padding: 50px 0">
     <div class="text-center mb-4 my-8">

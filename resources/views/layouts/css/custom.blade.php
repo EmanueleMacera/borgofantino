@@ -531,19 +531,6 @@ font-size:1.2rem!important;
     object-fit: cover;
 }
 
-.modal-content {
-    background: none;
-    border: none;
-}
-
-.modal-header {
-    display: none;
-}
-
-.modal-footer {
-    display: none;
-}
-
 .content-section {
     padding: 1rem;
     border-bottom: 0.1px solid var(--tertiary-color);

@@ -2,7 +2,7 @@
 
 @section('title', $page->title)
 
-@section('public-content')
+@section('content')
     <div class="home-content">
         @foreach($blocks as $block)
             @php

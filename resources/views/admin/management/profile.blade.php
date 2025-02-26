@@ -40,133 +40,174 @@
 
 @push('scripts')
 <script>
-    $(document).ready(function () {
+    document.addEventListener('DOMContentLoaded', function () {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        $('#confirm-email-btn').click(function () {
-            const form = $('#emailForm');
-            const actionUrl = form.attr('action');
-            const formData = form.serialize();
+        // Gestione della conferma email
+        document.getElementById('confirm-email-btn').addEventListener('click', function () {
+            const form = document.getElementById('emailForm');
+            const actionUrl = form.action;
+            const formData = new FormData(form);
 
-            $.post(actionUrl, formData)
-                .done(function (response) {
-                    showAlert('success', response.success);
-                    $('#emailModal').modal('hide');
-                })
-                .fail(function (xhr) {
-                    const errors = xhr.responseJSON?.errors || {};
-                    displayErrors(errors, '#email-error');
-                });
+            fetch(actionUrl, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                }
+            })
+            .then(response => response.json())
+            .then(response => {
+                showAlert('success', response.success);
+                let emailModal = new bootstrap.Modal(document.getElementById('emailModal'));
+                emailModal.hide();
+            })
+            .catch(error => {
+                displayErrors(error.errors, '#email-error');
+            });
         });
 
-        $('#new-email, #confirm-email').on('input', function () {
-            const newEmail = $('#new-email').val();
-            const confirmEmail = $('#confirm-email').val();
+        // Controllo dell'input email
+        document.querySelectorAll('#new-email, #confirm-email').forEach(input => {
+            input.addEventListener('input', function () {
+                const newEmail = document.getElementById('new-email').value;
+                const confirmEmail = document.getElementById('confirm-email').value;
 
-            if (!emailRegex.test(newEmail)) {
-                $('#email-error').text('{{ __('general.invalid_format') }}').show();
-                $('#confirm-email-btn').prop('disabled', true);
-            } else if (newEmail !== confirmEmail) {
-                $('#email-error').text('{{ __('general.do_not_match') }}').show();
-                $('#confirm-email-btn').prop('disabled', true);
-            } else {
-                $('#email-error').text('').hide();
-                $('#confirm-email-btn').prop('disabled', false);
-            }
+                if (!emailRegex.test(newEmail)) {
+                    document.getElementById('email-error').textContent = '{{ __('general.invalid_format') }}';
+                    document.getElementById('email-error').style.display = 'block';
+                    document.getElementById('confirm-email-btn').disabled = true;
+                } else if (newEmail !== confirmEmail) {
+                    document.getElementById('email-error').textContent = '{{ __('general.do_not_match') }}';
+                    document.getElementById('email-error').style.display = 'block';
+                    document.getElementById('confirm-email-btn').disabled = true;
+                } else {
+                    document.getElementById('email-error').textContent = '';
+                    document.getElementById('email-error').style.display = 'none';
+                    document.getElementById('confirm-email-btn').disabled = false;
+                }
+            });
         });
 
-        $('#old-password').on('input', function () {
-            const currentPassword = $.trim($(this).val());
+        // Gestione della conferma password
+        document.getElementById('old-password').addEventListener('input', function () {
+            const currentPassword = this.value.trim();
 
             if (currentPassword === '') {
-                $('#password-error').text('{{ __('general.current_password_required') }}').show();
-                $('#confirm-password-btn').prop('disabled', true);
+                document.getElementById('password-error').textContent = '{{ __('general.current_password_required') }}';
+                document.getElementById('password-error').style.display = 'block';
+                document.getElementById('confirm-password-btn').disabled = true;
                 return;
             }
 
-            $.post('{{ route('admin.check-password') }}', {
-                _token: $('meta[name="csrf-token"]').attr('content'),
-                current_password: currentPassword
+            fetch('{{ route('admin.check-password') }}', {
+                method: 'POST',
+                body: JSON.stringify({ current_password: currentPassword }),
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                }
             })
-                .done(function () {
-                    $('#password-error').text('').hide();
-                    validatePassword();
-                })
-                .fail(function () {
-                    $('#password-error').text('{{ __('general.current_password_incorrect') }}').show();
-                    $('#confirm-password-btn').prop('disabled', true);
-                });
+            .then(response => response.json())
+            .then(() => {
+                document.getElementById('password-error').style.display = 'none';
+                validatePassword();
+            })
+            .catch(() => {
+                document.getElementById('password-error').textContent = '{{ __('general.current_password_incorrect') }}';
+                document.getElementById('password-error').style.display = 'block';
+                document.getElementById('confirm-password-btn').disabled = true;
+            });
         });
 
-        $('#new-password, #new-password-confirmation').on('input', function () {
-            validatePassword();
+        document.querySelectorAll('#new-password, #new-password-confirmation').forEach(input => {
+            input.addEventListener('input', validatePassword);
         });
 
         function validatePassword() {
-            const newPassword = $.trim($('#new-password').val());
-            const confirmPassword = $.trim($('#new-password-confirmation').val());
+            const newPassword = document.getElementById('new-password').value.trim();
+            const confirmPassword = document.getElementById('new-password-confirmation').value.trim();
 
             if (newPassword !== confirmPassword) {
-                $('#password-error').text('{{ __('general.do_not_match') }}').show();
-                $('#confirm-password-btn').prop('disabled', true);
+                document.getElementById('password-error').textContent = '{{ __('general.do_not_match') }}';
+                document.getElementById('password-error').style.display = 'block';
+                document.getElementById('confirm-password-btn').disabled = true;
             } else {
-                $('#password-error').text('').hide();
-                $('#confirm-password-btn').prop('disabled', false);
+                document.getElementById('password-error').style.display = 'none';
+                document.getElementById('confirm-password-btn').disabled = false;
             }
         }
 
-        $('#confirm-password-btn').click(function () {
-            const form = $('#passwordForm');
-            const actionUrl = form.attr('action');
-            const formData = form.serialize();
+        // Gestione della conferma cambio password
+        document.getElementById('confirm-password-btn').addEventListener('click', function () {
+            const form = document.getElementById('passwordForm');
+            const actionUrl = form.action;
+            const formData = new FormData(form);
 
-            $.post(actionUrl, formData)
-                .done(function (response) {
-                    showAlert('success', response.success);
-                    $('#passwordModal').modal('hide');
-                })
-                .fail(function (xhr) {
-                    const errors = xhr.responseJSON?.errors || {};
-                    displayErrors(errors, '#password-error');
-                });
+            fetch(actionUrl, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                }
+            })
+            .then(response => response.json())
+            .then(response => {
+                showAlert('success', response.success);
+                let passwordModal = new bootstrap.Modal(document.getElementById('passwordModal'));
+                passwordModal.hide();
+            })
+            .catch(error => {
+                displayErrors(error.errors, '#password-error');
+            });
         });
 
-        $('#confirm-name-btn').click(function () {
-            const form = $('#nameForm');
-            const actionUrl = form.attr('action');
-            const formData = form.serialize();
+        // Gestione della conferma cambio nome
+        document.getElementById('confirm-name-btn').addEventListener('click', function () {
+            const form = document.getElementById('nameForm');
+            const actionUrl = form.action;
+            const formData = new FormData(form);
 
-            $.post(actionUrl, formData)
-                .done(function (response) {
-                    showAlert('success', response.success);
-                    $('#nameModal').modal('hide');
-                })
-                .fail(function (xhr) {
-                    const errors = xhr.responseJSON?.errors || {};
-                    displayErrors(errors, '#name-error');
-                });
+            fetch(actionUrl, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+                }
+            })
+            .then(response => response.json())
+            .then(response => {
+                showAlert('success', response.success);
+                let nameModal = new bootstrap.Modal(document.getElementById('nameModal'));
+                nameModal.hide();
+            })
+            .catch(error => {
+                displayErrors(error.errors, '#name-error');
+            });
         });
 
+        // Funzione per mostrare gli alert
         function showAlert(type, message) {
             const alertHtml = `
                 <div class="alert alert-${type} alert-dismissible fade show text-center" role="alert">
                     ${message}
                 </div>
             `;
-            $('.container').prepend(alertHtml);
+            document.querySelector('.container').insertAdjacentHTML('afterbegin', alertHtml);
             setTimeout(function () {
-                $('.alert').fadeOut('slow', function () {
-                    $(this).remove();
-                });
+                document.querySelector('.alert').classList.add('fade');
+                setTimeout(() => document.querySelector('.alert').remove(), 500);
             }, 5000);
         }
 
+        // Funzione per visualizzare gli errori
         function displayErrors(errors, errorContainer) {
             let errorMessages = '';
-            $.each(errors, function (field, messages) {
-                errorMessages += messages.join('<br>') + '<br>';
+            Object.keys(errors).forEach(field => {
+                errorMessages += errors[field].join('<br>') + '<br>';
             });
-            $(errorContainer).html(errorMessages).show();
+            document.querySelector(errorContainer).innerHTML = errorMessages;
+            document.querySelector(errorContainer).style.display = 'block';
         }
     });
 </script>

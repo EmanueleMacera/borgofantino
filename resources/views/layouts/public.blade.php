@@ -2,12 +2,12 @@
 
 @section('title', __('general.public_page'))
 
-@section('content')
+@section('app-content')
     <main class="flex-grow-1">
             @if (!Request::is('/'))
                 @include('layouts.partials.breadcrumb')
             @endif
-            @yield('public-content')
+            @yield('content')
     </main>
     <div id="scroll-indicator" class="scroll-indicator">
         <i class="fa-solid fa-angles-down"></i>

@@ -2,12 +2,12 @@
 
 @section('title', $item->name)
 
-@section('public-content')
+@section('content')
     <div class="row container" style="place-self: center;">
         <div class="col-lg-9">
             <div class="mb-4">
                 <!-- Carousel per dispositivi mobili (nascosto su desktop) -->
-                <div id="carouselExampleControlsMobile" class="carousel mb-2 slide d-md-none" data-ride="carousel" data-interval="3000">
+                <div id="carouselExampleControlsMobile" class="carousel slide mb-2 d-md-none" data-bs-ride="carousel" data-bs-interval="3000">
                     <div class="carousel-inner">
                         @if($item->itemMedia && $item->itemMedia->isNotEmpty())
                             @foreach($item->itemMedia as $index => $photo)
@@ -17,14 +17,14 @@
                             @endforeach
                         @endif
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControlsMobile" role="button" data-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsMobile" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">{{ __('custom.prev') }}</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControlsMobile" role="button" data-slide="next">
+                        <span class="visually-hidden">{{ __('custom.prev') }}</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsMobile" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">{{ __('custom.next') }}</span>
-                    </a>
+                        <span class="visually-hidden">{{ __('custom.next') }}</span>
+                    </button>
                 </div>
                 <!-- Fine Carousel Mobile -->
 
@@ -42,7 +42,7 @@
                                     $colSize = ($count >= 4 && $count % 2 !== 0) || ($count < 4 && $count % 2 === 0) ? 4 : 2;
                                 @endphp
                                 <div class="col-md-{{ $colSize }} mb-2" style="padding-left: 0.25rem; padding-right: 0.25rem">
-                                    <a href="#" data-toggle="modal" data-target="#galleryModal" data-slide-to="{{ $index }}">
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-slide-to="{{ $index }}">
                                         <img data-src="{{ asset('storage/' . $photo->path) }}" alt="{{ $item->name }}" class="img-fluid item-gallery lozad" loading="lazy">
                                     </a>
                                 </div>
@@ -62,17 +62,15 @@
                 <!-- Fine Griglia di Immagini Desktop -->
 
                 <!-- Modale Galleria -->
-                <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="galleryModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="galleryModalLabel">{{ $item->name }}</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-inner">
                                         @if($item->itemMedia && $item->itemMedia->isNotEmpty())
                                             @foreach($item->itemMedia as $index => $photo)
@@ -82,20 +80,21 @@
                                             @endforeach
                                         @endif
                                     </div>
-                                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">{{ __('custom.prev') }}</span>
-                                    </a>
-                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                        <span class="visually-hidden">{{ __('custom.prev') }}</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                        <span class="sr-only">{{ __('custom.next') }}</span>
-                                    </a>
+                                        <span class="visually-hidden">{{ __('custom.next') }}</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- Fine Modale Galleria -->
+                
                 <div class="row info-card d-flex align-items-start">
                     <div class="col-12 col-md-10">
                         <h1>{{ $item->name }}</h1>
@@ -117,7 +116,6 @@
                     </ul>
                 </div>
             @endif
-
             @if (!empty($item->link))
                 <div class="price-card">
                     <h3 class="card-title">{{ __('custom.show_price') }}</h3>
@@ -180,20 +178,28 @@
         const observer = lozad();
         observer.observe();
     </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('#galleryModal').on('show.bs.modal', function (event) {
-                var button = $(event.relatedTarget);
-                var slideTo = button.data('slide-to');
-                $('#carouselExampleControls').carousel(slideTo);
-            });
-        });
-    </script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const observer = lozad();
-            observer.observe();
+            const galleryModal = document.getElementById('galleryModal');
+            if (galleryModal) {
+                galleryModal.addEventListener('show.bs.modal', function (event) {
+                    const button = event.relatedTarget; // Button that triggered the modal
+                    const slideTo = button.getAttribute('data-bs-slide-to');
+                    const carousel = galleryModal.querySelector('.carousel');
+                    const bsCarousel = new bootstrap.Carousel(carousel);
+                    bsCarousel.to(slideTo);
+                });
+            }
+
+             // Inizializza il carosello mobile (opzionale, ma consigliato)
+             const carouselMobile = document.getElementById('carouselExampleControlsMobile');
+            if (carouselMobile) {
+                const bsCarouselMobile = new bootstrap.Carousel(carouselMobile, {
+                    interval: 3000,
+                    wrap: true
+                });
+            }
         });
     </script>
 
@@ -205,6 +211,8 @@
             if (map !== undefined) {
                 map.remove();
             }
+
+            L.Icon.Default.imagePath = "https://unpkg.com/leaflet@1.9.4/dist/images/";
         
             map = L.map('map').setView([{{ $item->latitude }}, {{ $item->longitude }}], 15);
         
