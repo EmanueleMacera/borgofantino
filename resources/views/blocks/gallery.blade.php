@@ -37,12 +37,12 @@
                     <img src="{{ asset('assets/custom/gallery/gallery_7.WebP') }}" alt="Gallery 7">
                 </a>
                 <a class="lightbox" href="{{ asset('assets/custom/gallery/gallery_8.WebP') }}">
-                    <img src="{{ asset('assets/custom/gallery/gallery_6.WebP') }}" alt="Gallery 8">
+                    <img src="{{ asset('assets/custom/gallery/gallery_8.WebP') }}" alt="Gallery 8">
                 </a>
             </div>
             <div class="col-sm-12 col-md-8">
                 <a class="lightbox" href="{{ asset('assets/custom/gallery/gallery_9.WebP') }}">
-                    <img src="{{ asset('assets/custom/gallery/gallery_4.WebP') }}" alt="Gallery 9">
+                    <img src="{{ asset('assets/custom/gallery/gallery_9.WebP') }}" alt="Gallery 9">
                 </a>
             </div>
 
@@ -68,11 +68,11 @@
                 </a>
             </div>
             <div class="col-sm-4 col-md-4">
-                <a class="lightbox" href="{{ asset('assets/custom/gallery/gallery_5.WebP') }}">
+                <a class="lightbox" href="{{ asset('assets/custom/gallery/gallery_14.WebP') }}">
                     <img src="{{ asset('assets/custom/gallery/gallery_14.WebP') }}" alt="Gallery 14">
                 </a>
-                <a class="lightbox" href="{{ asset('assets/custom/gallery/gallery_6.WebP') }}">
-                    <img src="{{ asset('assets/custom/gallery/gallery_14.WebP') }}" alt="Gallery 15">
+                <a class="lightbox" href="{{ asset('assets/custom/gallery/gallery_15.WebP') }}">
+                    <img src="{{ asset('assets/custom/gallery/gallery_15.WebP') }}" alt="Gallery 15">
                 </a>
             </div>
     </div>
