@@ -157,8 +157,8 @@ return [
     |
     */
     'available_locales' => [
-        'en' => 'English',
         'it' => 'Italian',
+        'en' => 'English',
         // 'de' => 'German',
         'fr' => 'French',
         // 'es' => 'Spanish',

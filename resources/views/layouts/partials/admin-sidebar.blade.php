@@ -54,12 +54,13 @@ function renderSidebarItems(array $items, int $level = 0, bool $isRoot = true): 
                  href="#"
                  data-bs-toggle="collapse"
                  data-bs-target="#'.$collapseId.'"
-                 id="'.$toggleId.'"
+                 aria-expanded="false"
+                 aria-controls="'.$collapseId.'"
               >
                 <i class="fa '.$item['icon'].'"></i>'.$item['title'].'
                 <i class="fa fa-chevron-right rotate-icon"></i>
               </a>
-              <div class="collapsible" id="'.$collapseId.'" style="height:0px;">
+              <div class="collapse" id="'.$collapseId.'">
             ';
 
             $html .= renderSidebarItems($item['children'], $level + 1, false);
@@ -97,18 +98,16 @@ function renderSidebarItems(array $items, int $level = 0, bool $isRoot = true): 
             if (!targetElement) return;
 
             const iconElement = toggle.querySelector('.rotate-icon');
+            
+            // Listen for collapse event to rotate the icon
+            targetElement.addEventListener('shown.bs.collapse', () => {
+                iconElement?.classList.add('rotate');
+                iconElement?.classList.remove('rotate-reverse');
+            });
 
-            toggle.addEventListener('click', (e) => {
-                e.preventDefault();
-                if (targetElement.style.height === '0px') {
-                    targetElement.style.height = targetElement.scrollHeight + 'px';
-                    iconElement?.classList.remove('rotate-reverse');
-                    iconElement?.classList.add('rotate');
-                } else {
-                    targetElement.style.height = '0px';
-                    iconElement?.classList.remove('rotate');
-                    iconElement?.classList.add('rotate-reverse');
-                }
+            targetElement.addEventListener('hidden.bs.collapse', () => {
+                iconElement?.classList.add('rotate-reverse');
+                iconElement?.classList.remove('rotate');
             });
         });
 

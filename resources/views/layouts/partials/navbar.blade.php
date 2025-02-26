@@ -1,5 +1,5 @@
 <!-- Navbar Blade Template -->
-<nav class="navbar navbar-expand-md">
+<nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container-fluid">
 
         <div class="d-flex flex-nowrap align-items-center">
@@ -19,10 +19,11 @@
             </a>
         </div>
 
-        <button class="button-toggle" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <!-- Toggle Button for Navbar on Mobile -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="{{ __('general.toggle_navigation') }}">
-            <i class="fa fa-bars"></i>
+            <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

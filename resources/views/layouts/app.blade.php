@@ -30,24 +30,22 @@
     <link rel="apple-touch-icon" href="{{ asset('assets/logo/phone-logo.WebP') }}">
 
     <!-- Vite -->
-    @vite([
-        'resources/sass/app.scss',
-        'resources/js/app.js'
+    @vite([ 
+        'resources/sass/app.scss', 
+        'resources/js/app.js' 
     ])
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- CSS di Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Altri stili -->
     <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ route('css.common') }}?v={{ optional($style->updated_at)->timestamp }}">
     <link rel="stylesheet" href="{{ route('css.custom') }}?v={{ config('app.version') }}">
-
-    <!-- Google Analytics -->
-
-    <!-- ShinyStat (Asincrono per evitare rallentamenti) -->
-
-    <!-- CookieYes Banner -->
 
 </head>
 <body>
