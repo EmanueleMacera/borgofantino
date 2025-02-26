@@ -147,28 +147,33 @@
             </div>
         </div>
 
-        <!-- Description -->
+        @php
+        $languages = config('app.available_locales'); // Ottieni le lingue abilitate
+    @endphp
+    
+    @foreach($languages as $langCode => $langName)
         <div class="form-group mb-3">
-            <label for="description">
-                <i class="fas fa-info-circle"></i>{{ __('general.description') }}
+            <label for="description_{{ $langCode }}">
+                <i class="fas fa-info-circle"></i>{{ __('general.description') }} ({{ $langName }})
             </label>
-            <textarea id="description"
-                      name="description"
+            <textarea id="description_{{ $langCode }}"
+                      name="description[{{ $langCode }}]"
                       class="form-control"
                       rows="5"
-                      placeholder="{{ __('general.describe_item') }}">{{ old('description', $item->description ?? '') }}</textarea>
+                      placeholder="{{ __('general.describe_item') }}">{{ old('description.' . $langCode, $item->getTranslation('description', $langCode) ?? '') }}</textarea>
         </div>
-
-        <!-- Nei Dintorni -->
+    
         <div class="form-group">
-            <label for="nei_dintorni">
-                <i class="fas fa-map-signs"></i>{{ __('custom.nearby') }}
+            <label for="nei_dintorni_{{ $langCode }}">
+                <i class="fas fa-map-signs"></i>{{ __('custom.nearby') }} ({{ $langName }})
             </label>
-            <textarea id="nei_dintorni"
-                      name="nei_dintorni"
+            <textarea id="nei_dintorni_{{ $langCode }}"
+                      name="nei_dintorni[{{ $langCode }}]"
                       class="form-control"
-                      rows="3" placeholder="{{__('custom.what_is_nearby')}}">{{ old('nei_dintorni', $item->nei_dintorni ?? '') }}</textarea>
+                      rows="3" placeholder="{{__('custom.what_is_nearby')}}">{{ old('nei_dintorni.' . $langCode, $item->getTranslation('nei_dintorni', $langCode) ?? '') }}</textarea>
         </div>
+    @endforeach
+    
 
         <!-- Link -->
         <div class="form-group">

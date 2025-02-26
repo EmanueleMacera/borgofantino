@@ -119,7 +119,7 @@ class ItemController extends Controller
         $data = $request->validate([
             'name'         => 'required|string|max:255',
             'category_id'  => 'required|exists:categories,id',
-            'description'  => 'nullable|string',
+            'description'  => 'nullable|array',
             'status'       => 'required|in:draft,publish',
             'thumbnail'    => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
             'photos.*'     => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
@@ -131,11 +131,23 @@ class ItemController extends Controller
             'camere' => 'nullable|numeric',
             'bagni' => 'nullable|numeric',
             'posti_letto' => 'nullable|numeric',
-            'nei_dintorni' => 'nullable|string',
+            'nei_dintorni' => 'nullable|array',
             'link' => 'nullable|url',
         ]);
 
         $data['slug'] = Str::slug($data['name'] ?? '');
+
+        if (isset($data['description'])) {
+            foreach ($data['description'] as $lang => $desc) {
+                $item->setTranslation('description', $lang, $desc);
+            }
+        }
+
+        if (isset($data['nei_dintorni'])) {
+            foreach ($data['nei_dintorni'] as $lang => $nei) {
+                $item->setTranslation('nei_dintorni', $lang, $nei);
+            }
+        }
 
         $item->fill($data)->save();
 

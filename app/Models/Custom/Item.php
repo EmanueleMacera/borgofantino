@@ -3,12 +3,15 @@
 namespace App\Models\Custom;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
 use App\Models\Custom\ItemMedia;
 use App\Models\Custom\Attribute;
 use App\Models\Custom\Category;
 
 class Item extends Model
 {
+    use HasTranslations;
+
     /**
      * The table associated with the model.
      *
@@ -27,7 +30,6 @@ class Item extends Model
         'description',
         'category_id',
         'status',
-
         'adress',
         'latitude',
         'longitude',
@@ -37,6 +39,13 @@ class Item extends Model
         'bagni',
         'posti_letto',
     ];
+
+    /**
+     * The attributes that are translatable.
+     *
+     * @var array
+     */
+    public $translatable = ['description', 'nei_dintorni']; // Specifica i campi traducibili
 
     /**
      * Define a relationship with the ItemMedia model (Photos).
