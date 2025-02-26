@@ -793,6 +793,52 @@ font-size:1.2rem!important;
 }
 
 {{-- ========================= --}}
+{{-- 10. Galleria              --}}
+{{-- ========================= --}}
+.tz-gallery {
+    padding: 40px;
+}
+
+.tz-gallery .row > div {
+    padding: 2px;
+}
+
+.tz-gallery .lightbox img {
+    width: 100%;
+    border-radius: 0;
+    position: relative;
+    display: block;
+}
+
+.tz-gallery .lightbox:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: rgb(235, 227, 216, 0.4);
+    content: '';
+    transition: 0.4s;
+    pointer-events: none;
+}
+
+.tz-gallery .lightbox {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.tz-gallery .lightbox:hover:after,
+.tz-gallery .lightbox:hover:before {
+    opacity: 1;
+}
+
+.baguetteBox-button {
+    background-color: transparent !important;
+}
+
+{{-- ========================= --}}
 {{-- 20. Media Queries         --}}
 {{-- ========================= --}}
 @media (max-width: 992px) {
