@@ -801,7 +801,7 @@ font-size:1.2rem!important;
 
 .tz-gallery .lightbox img {
     width: 100%;
-    border-radius: 0;
+    border-radius: 10px;
     position: relative;
     display: block;
 }
