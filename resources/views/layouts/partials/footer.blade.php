@@ -40,7 +40,7 @@
                         <li><strong>{{ __('general.address') }}:</strong> {{ $style->footer_address }}</li>
                     @endif
                 </ul>
-                <ul class="social-icons d-flex gap-2 mt-3">
+                <ul class="list-unstyle social-icons d-flex gap-2 mt-3">
                     @php $socials = $style->social ?? []; @endphp
                     @foreach (['facebook', 'x', 'linkedin', 'instagram', 'tiktok'] as $platform)
                         @if($socials[$platform]['enabled'] ?? false)
