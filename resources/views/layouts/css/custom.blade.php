@@ -102,16 +102,6 @@ html {
 }
 
 {{-- Alloggi --}}
-.block-parallax-alloggi {
-    background-image: url("{{ asset('assets/custom/parallax/alloggi.WebP') }}");
-    background-size: cover;
-    background-position: bottom center;
-    position: relative;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 50vh;
-}
-
 .alloggi-container {
     margin-bottom:50px;
     will-change: transform;

@@ -1,4 +1,3 @@
-<div class="block-parallax-alloggi"></div>
 <div class="container mb-4 mt-4">
     <div class="cards-container">
         @foreach ($items as $item)

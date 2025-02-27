@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Public;
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Page;
 use App\Models\Custom\Item;
-use App\Models\Custom\CategoryType;
-use App\Models\Custom\Category;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -64,28 +62,6 @@ class PublicController extends Controller
         }
 
         return redirect()->back();
-    }
-
-    /**
-     * Display categories/items by type and categoryType slug.
-     *
-     * @param  string  $slug
-     * @return \Illuminate\View\View
-     */
-    public function showCategoryType(string $slug)
-    {
-        $categoryType = CategoryType::where('slug', $slug)->firstOrFail();
-
-        $items = Item::whereHas('category', function ($query) use ($categoryType) {
-                $query->where('type_id', $categoryType->id);
-            })
-            ->with(['thumbnail', 'category'])
-            ->orderBy('created_at', 'desc')
-            ->get();
-
-        $uniqueCategories = $items->pluck('category')->unique('id');
-
-        return view('public.type.show', compact('categoryType', 'items', 'uniqueCategories'));
     }
 
     /**
