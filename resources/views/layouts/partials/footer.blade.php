@@ -10,7 +10,7 @@
 
             <!-- Resource Links -->
             <div class="col-12 col-md-4 mb-4 mb-md-0">
-                <ul class="list-unstyled text-start text-md-center">
+                <ul class="text-start text-md-center" style="list-style: none;">
                     @if(isset($style->footer_links) && is_array($style->footer_links))
                         @foreach ($style->footer_links as $linkData)
                             <li>
